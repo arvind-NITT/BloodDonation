@@ -63,6 +63,8 @@ namespace BloodDonationBackend.Repositories
                 data.Quantity = item.Quantity;
                 data.IsUrgent = item.IsUrgent;
                 data.Status = item.Status;
+                data.State = item.State;
+                data.District = item.District;
 
                 _context.Entry(data).State = EntityState.Modified; // Mark entity as modified
                 await _context.SaveChangesAsync(); // Save changes to database

@@ -3,11 +3,13 @@ using BloodDonationBackend.Models.DTOs;
 using BloodDonationBackend.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
 namespace BloodDonationBackend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowAll")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -46,6 +48,22 @@ namespace BloodDonationBackend.Controllers
             try
             {
                 LoginReturnDTO result = await _userService.Register(userDTO);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ErrorModel(501, ex.Message));
+            }
+        }
+        [HttpPost("DonorSearch")]
+        [ProducesResponseType(typeof(LoginReturnDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<DonorSearchReturnDTO>> DonorSearch(DonorSearchDTO userDTO)
+        {
+            try
+            {
+                Console.WriteLine("reaching here");
+                var result = await _userService.SearchForDonor(userDTO);
                 return Ok(result);
             }
             catch (Exception ex)

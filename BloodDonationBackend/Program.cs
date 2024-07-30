@@ -67,12 +67,12 @@ namespace BloodDonationBackend
             #region services
             //builder.Services.AddScoped<IEmployeeService, EmployeeBasicService>();
             builder.Services.AddScoped<IUserService, UserService>();
-            //builder.Services.AddScoped<IMatchService, MatchService>();
+            builder.Services.AddScoped<IDonorService, DonorService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
-            //builder.Services.AddScoped<IProfileService, ProfileService>();
+            builder.Services.AddScoped<IRecipientService, RecipientService>();
             //builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
             //builder.Services.AddScoped<ITransactionService, TransactionService>();
-            //builder.Services.AddScoped<IAdminService, AdminService>();
+            builder.Services.AddScoped<IAdminInterface, AdminService>();
 
             #endregion
             #region CORS
@@ -93,9 +93,9 @@ namespace BloodDonationBackend
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseCors("AllowAll");
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

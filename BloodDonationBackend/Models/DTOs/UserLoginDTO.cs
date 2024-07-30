@@ -4,9 +4,9 @@ namespace BloodDonationBackend.Models.DTOs
 {
     public class UserLoginDTO
     {
-        [Required(ErrorMessage = "Email address is required.")]
-        [EmailAddress(ErrorMessage = "Invalid email address format.")]
-        [RegularExpression(@"^[a-zA-Z0-9_.+-]+@gmail\.com$", ErrorMessage = "Email must be a Gmail address.")]
+        //[Required(ErrorMessage = "Email address is required.")]
+        //[EmailAddress(ErrorMessage = "Invalid email address format.")]
+        //[RegularExpression(@"^[a-zA-Z0-9_.+-]+@gmail\.com$", ErrorMessage = "Email must be a Gmail address.")]
         public string PhoneNumber { get; set; }
 
 

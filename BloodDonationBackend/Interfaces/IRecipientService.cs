@@ -8,7 +8,7 @@ namespace BloodDonationBackend.Interfaces
         public Task<IEnumerable<DonorSearchReturnDTO>> SearchForBlood(DonorSearchDTO donorSearchDTO);
         public Task<BloodRequestReturnDTO> RequestBlood(BloodRequestDTO donationCenterSearchDTO);
         public Task<IEnumerable<BloodRequestReturnDTO>> ViewRequest(int Id);
-        public Task<Recipient> UpdateMedicalInfo(string medicalInfo);
+        public Task<Recipient> UpdateMedicalInfo(int userid,string medicalInfo);
         public Task<BloodRequestReturnDTO> UpdateRequest(UpdateRequestDTO updateRequestDTO);
     }
 }

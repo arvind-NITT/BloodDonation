@@ -5,8 +5,5 @@
         public int UserId { get; set; }
         public int CenterId { get; set; }
         public DateTime Date { get; set; }
-
-
-
     }
 }

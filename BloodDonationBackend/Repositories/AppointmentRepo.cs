@@ -43,6 +43,14 @@ namespace BloodDonationBackend.Repositories
         {
             return (await _context.Appointments.ToListAsync());
         }
+        public async Task<IEnumerable<Appointment>> Getappointmentsbyid(int donorid)
+        {
+            var appointments = await _context.Appointments
+                 .Where(a => a.DonorId == donorid)
+                 .ToListAsync();
+
+            return appointments;
+        }
 
         public IQueryable<Appointment> Query()
         {

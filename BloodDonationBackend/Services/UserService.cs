@@ -157,9 +157,24 @@ namespace BloodDonationBackend.Services
             throw new UnableToRegisterException("Not able to register at this moment");
         }
 
-        public Task<IEnumerable<DonorSearchReturnDTO>> SearchForDonor(DonorSearchDTO donorSearchDTO)
+        public async Task<IEnumerable<DonorSearchReturnDTO>> SearchForDonor(DonorSearchDTO donorSearchDTO)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(donorSearchDTO);
+            var query = from u in _context.Users
+                        join d in _context.Donors on u.UserId equals d.UserId
+                        where u.BloodType == donorSearchDTO.BloodType
+                              && u.state == donorSearchDTO.state
+                              && u.District == donorSearchDTO.District
+                              && d.Available == true // Include only available donors
+                        select new DonorSearchReturnDTO
+                        {
+                            DonorId = d.DonorId,
+                            DonorName = u.Name,
+                            ContactNumber = u.PhoneNumber,
+                            Available = d.Available
+                        };
+
+            return await query.ToListAsync();
         }
     }
 }
