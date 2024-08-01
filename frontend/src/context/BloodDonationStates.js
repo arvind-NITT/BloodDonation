@@ -4,11 +4,15 @@ import React, { useState } from 'react';
 import BloodDonationContext from './Contexts';
 
 const BloodDonationStates = ({ children }) => {
+
+  const [usertype, setusertype] = useState('');
   const [bloodType, setBloodType] = useState('');
   const [donors, setDonors] = useState([]);
   const [DonationCenter, setDonationCenter] = useState([]);
   const [Appointments, setAppointments] = useState([]);
+  const [AllAppointments, setAllAppointments] = useState([]);
   const [Request, setRequests] = useState([]);
+  const [RequestInmyDistrict, setRequestInmyDistrict] = useState([]);
   const [AllRequests, setAllRequests] = useState([]);
   const [BloodSearch, setBloodSearch] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -67,7 +71,7 @@ const BloodDonationStates = ({ children }) => {
       setDonationCenter(result);  
       console.log(result);
    }
-   const ScheduleAppointment= async(item)=>{
+   const ScheduleAppointmentforme= async(item)=>{
        const url= `${BACKENDLINK}/api/Donor/ScheduleAppointment`;
       const response= await fetch(url,{
        method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -78,12 +82,13 @@ const BloodDonationStates = ({ children }) => {
         'Authorization': `Bearer ${token}`
        },
        body: JSON.stringify({
-        "centerId": 5,
-        "date": "2024-07-26T09:44:21.231Z"
+        "centerId": item.centerid,
+        "date": item.date
        })
       })
       const result= await response.json();
       setAppointments(result);  
+      console.log(result);
    }
    const RequestBlood= async(item)=>{
        const url= `${BACKENDLINK}/api/Recipient/RequestBlood`;
@@ -96,12 +101,12 @@ const BloodDonationStates = ({ children }) => {
         'Authorization': `Bearer ${token}`
        },
        body: JSON.stringify({
-        "bloodType": "A+",
-        "quantity": 1,
-        "state": "Madhya Pradesh",
-        "district": "Mandsaur",
-        "requestDate": "2024-07-26T19:00:50.897Z",
-        "isUrgent": true
+        "bloodType": item.bloodType,
+        "quantity": item.Quantity,
+        "state": item.state,
+        "district": item.district,
+        "requestDate": "2024-07-31T19:00:50.897Z",
+        "isUrgent": item.IsUrgent
        })
       })
       const result= await response.json();
@@ -151,6 +156,36 @@ const BloodDonationStates = ({ children }) => {
       const result= await response.json();
       // setBloodSearch(result);  
    }
+   const donorViewRequest= async()=>{
+       const url= `${BACKENDLINK}/api/Donor/RequestInMyDistrict`;
+      const response= await fetch(url,{
+       method: 'GET', // *GET, POST, PUT, DELETE, etc.
+       headers:{
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+        'Authorization': `Bearer ${token}`
+       },
+      })
+      const result= await response.json();
+      setRequestInmyDistrict(result);  
+      console.log(result);
+   }
+   const donorViewAppointment= async()=>{
+       const url= `${BACKENDLINK}/api/Donor/ViewAppointment`;
+      const response= await fetch(url,{
+       method: 'GET', // *GET, POST, PUT, DELETE, etc.
+       headers:{
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+        'Authorization': `Bearer ${token}`
+       },
+      })
+      const result= await response.json();
+      setAllAppointments(result);  
+      console.log(result);
+   }
    const ViewRequest= async()=>{
        const url= `${BACKENDLINK}/api/Recipient/ViewRequest`;
       const response= await fetch(url,{
@@ -164,6 +199,7 @@ const BloodDonationStates = ({ children }) => {
       })
       const result= await response.json();
       setAllRequests(result);  
+      console.log(result);
    }
    const UpdateInfoForDonor= async(item)=>{
        const url= `${BACKENDLINK}/api/Donor/UpdateInfo`;
@@ -212,7 +248,10 @@ const BloodDonationStates = ({ children }) => {
 
 
   return (
-    <BloodDonationContext.Provider value={{ UpdateInfoForRecipient,bloodType,fetchdonors, setBloodType,SearchDonationCenter,ScheduleAppointment,RequestBlood,SearchForBlood, donors, addDonor, isLoading, setIsLoading , AllRequests, ViewRequest }}>
+    <BloodDonationContext.Provider value={{setusertype,usertype,DonationCenter, UpdateInfoForRecipient,bloodType,
+    fetchdonors, setBloodType,SearchDonationCenter,ScheduleAppointmentforme,RequestBlood,
+    SearchForBlood, donors, addDonor, isLoading, setIsLoading , AllRequests, ViewRequest,addDonationCenter,donorViewRequest
+    ,donorViewAppointment,UpdateInfoForDonor,AllAppointments,RequestInmyDistrict}}>
       {children}
     </BloodDonationContext.Provider>
   );

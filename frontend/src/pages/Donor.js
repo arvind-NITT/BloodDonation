@@ -2,28 +2,17 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import Navbar from '../components/Navbar';
 import BloodDonationContext from '../context/Contexts';
-import '../components/homestyles.css';
 
-const Recipient = () => {
+const Donor = () => {
 
-    const { fetchdonors, SearchDonationCenter, UpdateInfoForRecipient, ScheduleAppointment, RequestBlood, SearchForBlood, donors, AllRequests, ViewRequest } = useContext(BloodDonationContext);
+    const { SearchDonationCenter, DonationCenter, ScheduleAppointmentforme, donorViewRequest, donorViewAppointment,
+        RequestInmyDistrict, AllAppointments
+    } = useContext(BloodDonationContext);
 
     useEffect(() => {
-        ViewRequest();
+        donorViewAppointment();
+        donorViewRequest();
     }, []);
-
-    const [RequestData, setRequestData] = useState({
-        
-        state: '',
-        district: '',
-        bloodType: '',
-        Quantity:0,
-        IsUrgent: true,
-      });
-
-
-     
-
     const [states, setStates] = useState([
         { name: 'Andhra Pradesh', districts: ['Anantapur', 'Chittoor', 'East Godavari', 'Guntur', 'Krishna', 'Kurnool', 'Prakasam', 'Srikakulam', 'Sri Potti Sriramulu Nellore', 'Visakhapatnam', 'Vizianagaram', 'West Godavari', 'YSR Kadapa'] },
         { name: 'Arunachal Pradesh', districts: ['Tawang', 'West Kameng', 'East Kameng', 'Papum Pare', 'Kurung Kumey', 'Kra Daadi', 'Lower Subansiri', 'Upper Subansiri', 'West Siang', 'East Siang', 'Siang', 'Upper Siang', 'Lower Siang', 'Lower Dibang Valley', 'Dibang Valley', 'Anjaw', 'Lohit', 'Namsai', 'Changlang', 'Tirap', 'Longding'] },
@@ -57,11 +46,15 @@ const Recipient = () => {
         { name: 'Uttarakhand', districts: ['Almora', 'Bageshwar', 'Chamoli', 'Champawat', 'Dehradun', 'Haridwar', 'Nainital', 'Pauri Garhwal', 'Pithoragarh', 'Rudraprayag', 'Tehri Garhwal', 'Udham Singh Nagar', 'Uttarkashi'] },
         { name: 'West Bengal', districts: ['Alipurduar', 'Bankura', 'Birbhum', 'Burdwan', 'Cooch Behar', 'Dakshin Dinajpur', 'Darjeeling', 'Hooghly', 'Howrah', 'Jalpaiguri', 'Jhargram', 'Kalimpong', 'Kolkata', 'Maldah', 'Murarai', 'Nadia', 'North 24 Parganas', 'Paschim Bardhaman', 'Paschim Medinipur', 'Purba Bardhaman', 'Purba Medinipur', 'Purulia', 'South 24 Parganas', 'Uttar Dinajpur'] },
     ]);
-
+    
     const [selectedState, setSelectedState] = useState('');
+    const [viewrequestdiv, setviewrequestdiv] = useState(true);
+    const [viewappointmentdiv, setviewappointmentdiv] = useState(false);
     const [districts, setDistricts] = useState([]);
     const [selectedDistrict, setSelectedDistrict] = useState('');
     const [bloodType, setBloodType] = useState('');
+    const [appointmentdate, setappointmentdate] = useState('');
+    const [centerid, setcenterid] = useState('');
 
     useEffect(() => {
         if (selectedState) {
@@ -76,6 +69,10 @@ const Recipient = () => {
         }
     }, [selectedState, states]);
 
+    const handledateChange = (e) => {
+        setappointmentdate(e.target.value);
+        console.log(e.target.value);
+    };
     const handleStateChange = (e) => {
         setSelectedState(e.target.value);
         setSelectedDistrict(''); // Reset district selection when state changes
@@ -85,46 +82,39 @@ const Recipient = () => {
         setSelectedDistrict(e.target.value);
     };
 
-    const handleBloodTypeChange = (e) => {
-        setBloodType(e.target.value);
-    };
+    // const handleBloodTypeChange = (e) => {
+    //     setBloodType(e.target.value);
+    // };
 
+     const changedivvisibilty =()=>{
+        if(viewrequestdiv==true){
+            setviewappointmentdiv(true);
+            setviewrequestdiv(false);
+        }
+        else {
+            setviewappointmentdiv(false);
+            setviewrequestdiv(true);
+        }
+     }
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic here
-        console.log(`State: ${selectedState}, District: ${selectedDistrict}, Blood Type: ${bloodType}`);
-        fetchdonors({ state: selectedState, district: selectedDistrict, bloodType: bloodType })
-        console.log(donors);
+        console.log(`State: ${selectedState}, District: ${selectedDistrict}`);
+        SearchDonationCenter({ state: selectedState, district: selectedDistrict })
+        console.log(DonationCenter);
 
     };
+    const ScheduleAppointment = (e) => {
+        // Handle form submission logic here
+        console.log(`date: ${appointmentdate},centerid: ${centerid}`);
+        ScheduleAppointmentforme({ centerid: centerid, date: appointmentdate });
+        // console.log(DonationCenter);
 
-//-----------------------------------------------------------------------//
-    const handlerequestStateChange = async(e) => {
-        const selectedState = e.target.value;
-        setRequestData({ ...RequestData, state: selectedState, district: '' });
-      };
-    
-      const handleChange = (e) => {
-        setRequestData({ ...RequestData, [e.target.name]: e.target.value });
-      };
-      const handleRequestSubmit =async (e) => {
-
-        try{
-        e.preventDefault();
-         console.log(RequestData);
-       RequestBlood(RequestData);
-       
-        
-          }catch(error)
-        {  console.error('Error:', error);
-          alert(error);}
-        ;
-      };
-
+    };
     return (
         <>
             <Navbar />
-            <section>
+            <div className='container'>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -133,175 +123,162 @@ const Recipient = () => {
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-
-                                <form class="row g-3" onSubmit={handleRequestSubmit}>
-                                    <div className="col-md-6">
-                                        <label htmlFor="bloodType" className="form-label">Blood Type</label>
-                                        <input type="text" className="form-control" id="bloodType" name="bloodType" onChange={handleChange} />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <label htmlFor="state" className="form-label">State:</label>
-                                        <select id="state" name="state" className="form-select" value={RequestData.state} onChange={handlerequestStateChange}>
-                                            {states.map((state) => (
-                                                <option key={state.name} value={state.name}>{state.name}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-
-                                    <div className="col-md-6">
-                                        <label htmlFor="district" className="form-label">District:</label>
-                                        <select className="form-select" id="district" name="district" value={RequestData.district} onChange={handleChange} disabled={!RequestData.state}>
-                                            {states.find((state) => state.name === RequestData.state)?.districts.map((district) => (
-                                                <option key={district} value={district}>{district}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                    <div className="col-12">
-                                        <label htmlFor="address" className="form-label">Quantity</label>
-                                        <input type="text" className="form-control" id="Quantity" name="Quantity" onChange={handleChange} placeholder="1" />
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-check">
-                                            <input
-                                                className="form-check-input"
-                                                type="checkbox"
-                                                id="gridCheck"
-                                                name="IsUrgent"
-                                                checked={RequestData.IsUrgent}
-                                                onChange={e => setRequestData({ ...RequestData, IsUrgent: e.target.checked })}
-                                            />
-                                            <label className="form-check-label" htmlFor="gridCheck">
-                                                Urgent Need
-                                            </label>
-                                        </div>
-                                    </div>
-
-
-
-
-                                    <div class="modal-footer">
+                                <div className="col-md-6">
+                                    <label htmlFor="dateOfBirth" className="form-label">Date Of Appointment</label>
+                                    <input type="date" className="form-control" id="dateOfBirth" name="dateOfAppointment" onChange={handledateChange} />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary" >Save changes</button>
+                                <button type="button" class="btn btn-primary" onClick={ScheduleAppointment}>Save changes</button>
                             </div>
-                                </form>
-
-                            </div>
-                           
                         </div>
                     </div>
                 </div>
-                <div className='container requestmadebyyou'>
-                    <h2>Blood Requests</h2>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">No.</th>
-                                <th scope="col">BloodType</th>
-                                <th scope="col">State</th>
-                                <th scope="col">District</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">RequestDate</th>
-                                <th scope="col">IsUrgent</th>
-                                <th scope="col">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {AllRequests && AllRequests.map((item, index) => (
-                                <tr>
-                                    <th id={index} key={index} scope="row">{index + 1}</th>
-                                    <td>{item.bloodType}</td>
-                                    <td>{item.state}</td>
-                                    <td>{item.district}</td>
-                                    <td>{item.quantity}</td>
-                                    <td>{item.requestDate}</td>
-                                    <td>{item.isUrgent == true ? "Yes" : " No"}</td>
-                                    <td>{item.status}</td>
-                                </tr>
-                            ))}
-                            <tr>
-                                <button type="button" class="btn btn-danger bg-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Initialize new Request
-                                </button>
-                            </tr>
+                <section>
+                    <h2>Looking for Donation</h2>
+                    <div className='container donationcenters'>
+                        <section>
+                            <div className='find-donor container'>
+                                <form className="row g-3" onSubmit={handleSubmit}>
+                                    <div className="col-md-4">
+                                        <label htmlFor="inputState" className="form-label">State</label>
+                                        <select id="inputState" className="form-select" value={selectedState} onChange={handleStateChange}>
+                                            <option value="" disabled>Choose...</option>
+                                            {states.map((state, index) => (
+                                                <option key={index} value={state.name}>{state.name}</option>
+                                            ))}
+                                        </select>
+                                    </div>
 
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                                    <div className="col-md-4">
+                                        <label htmlFor="inputDistrict" className="form-label">District</label>
+                                        <select id="inputDistrict" className="form-select" value={selectedDistrict} onChange={handleDistrictChange} disabled={!selectedState}>
+                                            <option value="" disabled>Choose...</option>
+                                            {districts.map((district, index) => (
+                                                <option key={index} value={district}>{district}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                    <div className="col-12">
+                                        <button type="submit" className="btn btn-primary">Search Donation Centers</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
 
-            <section>
-                <div className='find-donor container'>
-                    <form className="row g-3" onSubmit={handleSubmit}>
-                        <div className="col-md-4">
-                            <label htmlFor="inputState" className="form-label">State</label>
-                            <select id="inputState" className="form-select" value={selectedState} onChange={handleStateChange}>
-                                <option value="" disabled>Choose...</option>
-                                {states.map((state, index) => (
-                                    <option key={index} value={state.name}>{state.name}</option>
-                                ))}
-                            </select>
+                        <section>
+                            <div className='container'>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Contact Number</th>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">Open </th>
+                                            <th scope="col">more </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {DonationCenter && DonationCenter.map((item, index) => (
+                                            <tr key={index}>
+                                                <th id={index} scope="row">{index + 1}</th>
+                                                <td>{item.name}</td>
+                                                <td>{item.contactInfo}</td>
+                                                <td>{item.address}</td>
+                                                <td>{item.operatingHours}</td>
+                                                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" onClick={() => setcenterid(item.centerId)} data-bs-target="#exampleModal">
+                                                    Launch demo modal
+                                                </button></td>
+                                            </tr>
+                                        ))}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div className='container'>
+                        <div className='heading-option'>
+                            <button type="button" class="btn btn-outline-secondary" onClick={changedivvisibilty} >New Requests</button>
+                            <button type="button" class="btn btn-outline-success" onClick={changedivvisibilty}>Your Appointments</button>
                         </div>
+                        <div className='donor-content'>
+                        { viewrequestdiv &&    <div className='content'>
+                                <h2>New Blood Requests</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">BloodType</th>
+                                            <th scope="col">State</th>
+                                            <th scope="col">District</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">RequestDate</th>
+                                            <th scope="col">IsUrgent</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {RequestInmyDistrict && RequestInmyDistrict.map((item, index) => (
+                                            <tr>
+                                                <th id={index} key={index} scope="row">{index + 1}</th>
+                                                <td>{item.bloodType}</td>
+                                                <td>{item.state}</td>
+                                                <td>{item.district}</td>
+                                                <td>{item.quantity}</td>
+                                                <td>{item.requestDate}</td>
+                                                <td>{item.isUrgent == true ? "Yes" : " No"}</td>
+                                                <td>{item.status}</td>
+                                            </tr>
+                                        ))}
+                                        
 
-                        <div className="col-md-4">
-                            <label htmlFor="inputDistrict" className="form-label">District</label>
-                            <select id="inputDistrict" className="form-select" value={selectedDistrict} onChange={handleDistrictChange} disabled={!selectedState}>
-                                <option value="" disabled>Choose...</option>
-                                {districts.map((district, index) => (
-                                    <option key={index} value={district}>{district}</option>
-                                ))}
-                            </select>
+                                    </tbody>
+                                </table>
+
+                            </div>}
+                          {viewappointmentdiv &&   <div className='content'>
+                                <h2>Your Appointments</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No.</th>
+                                           
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {AllAppointments && AllAppointments.map((item, index) => (
+                                            <tr>
+                                                <th id={index} key={index} scope="row">{index + 1}</th>
+                                                <td>{item.appointmentDate}</td>
+                                                <td>{item.location}</td>
+                                                 <td>{item.status}</td>
+                                            </tr>
+                                        ))}
+                                    
+
+                                    </tbody>
+                                </table>
+
+                            </div>}
                         </div>
+                    </div>
+                </section>
+            </div>
 
-                        <div className="col-md-4">
-                            <label htmlFor="inputBloodType" className="form-label">Blood Type</label>
-                            <select id="inputBloodType" className="form-select" value={bloodType} onChange={handleBloodTypeChange}>
-                                <option value="" disabled>Choose...</option>
-                                <option value="A+">A+</option>
-                                <option value="O+">O+</option>
-                                <option value="B+">B+</option>
-                                <option value="AB+">AB+</option>
-                                <option value="A-">A-</option>
-                                <option value="O-">O-</option>
-                                <option value="B-">B-</option>
-                                <option value="AB-">AB-</option>
-                            </select>
-                        </div>
 
-                        <div className="col-12">
-                            <button type="submit" className="btn btn-primary">Search Donors</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-
-            <section>
-                <div className='container'>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">No.</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Contact Number</th>
-                                <th scope="col">Availability</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {donors && donors.map((item, index) => (
-                                <tr>
-                                    <th id={index} key={index} scope="row">{index + 1}</th>
-                                    <td>{item.donorName}</td>
-                                    <td>{item.contactNumber}</td>
-                                    <td>{item.available == true ? "Yes" : " No"}</td>
-                                </tr>
-                            ))}
-
-                        </tbody>
-                    </table>
-                </div>
-            </section>
         </>
     );
 }
 
 
-export default Recipient;
+export default Donor;

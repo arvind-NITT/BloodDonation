@@ -93,6 +93,74 @@ namespace BloodDonationBackend.Controllers
                  return StatusCode(StatusCodes.Status500InternalServerError, new ErrorModel(StatusCodes.Status500InternalServerError, "An unexpected error occurred."));
             }
         }
+         [Authorize]
+        [HttpGet("ViewAppointment")]
+        [ProducesResponseType(typeof(List<ScheduleAppointmentReturnDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<List<ScheduleAppointmentReturnDTO>>> ViewAppointment()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new ErrorModel(StatusCodes.Status400BadRequest, "Invalid data."));
+            }
+
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                int userId = int.Parse(userIdClaim.Value);
+               
+                var result = await _DonorService.ViewAppointments(userId);
+                return Ok(result);
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(new ErrorModel(StatusCodes.Status404NotFound, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                 return StatusCode(StatusCodes.Status500InternalServerError, new ErrorModel(StatusCodes.Status500InternalServerError, "An unexpected error occurred."));
+            }
+        }
+          [Authorize]
+        [HttpGet("RequestInMyDistrict")]
+        [ProducesResponseType(typeof(List<BloodRequestReturnDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<List<BloodRequestReturnDTO>>> RequestInMyDistrict()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new ErrorModel(StatusCodes.Status400BadRequest, "Invalid data."));
+            }
+
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                int userId = int.Parse(userIdClaim.Value);
+               
+                var result = await _DonorService.RequestInMyDistrict(userId);
+                return Ok(result);
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(new ErrorModel(StatusCodes.Status404NotFound, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                 return StatusCode(StatusCodes.Status500InternalServerError, new ErrorModel(StatusCodes.Status500InternalServerError, "An unexpected error occurred."));
+            }
+        }
 
         [Authorize]
         [HttpPut("UpdateInfo")]

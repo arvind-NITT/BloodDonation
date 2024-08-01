@@ -1,9 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
-import { redirect } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import BloodDonationContext from '../context/Contexts';
 
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Register = () => {
+  const {usertype } = useContext(BloodDonationContext);
+
+  useEffect(() => {
+    console.log(usertype);
+    
+}, []);
+
+
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
@@ -18,7 +27,7 @@ const Register = () => {
     bloodType: '',
     gender: '',
     fatherName: '',
-    role: 'Donor',
+    role: '',
     available: true,
     medicalCondition: ''
   });
@@ -69,9 +78,6 @@ const Register = () => {
   const handleSubmit =async (e) => {
 
     try{
-
-    
-    console.log("xdfghvcxz")
     e.preventDefault();
     if (!isValidAge(formData.dateOfBirth)) {
       alert("Age must be 18 or above. You are not allowed to proceed.");
@@ -98,10 +104,10 @@ const Register = () => {
         "district": formData.district,
         "pincode": formData.zip,
         "address":formData.address,
-        "role": formData.role,
+        "role": usertype,
         "password": formData.password,
         "available": formData.available,
-        "medicalCondition": "Ok"
+        "medicalCondition": formData.medicalCondition
       })
     })
     const data= await response.json();
@@ -115,7 +121,12 @@ const Register = () => {
       localStorage.setItem('token', data.token);
       localStorage.setItem('UserID', data.UserID);
        alert("Registration done");
-       navigate('/');
+       if(data.role === "Recipient")
+        navigate('/Recipient');
+        else if(data.role === "Donor")
+        navigate('/Donor');
+        else if(data.role === "Admin")
+        navigate('/Admin');
       }catch(error)
     {  console.error('Error:', error);
       alert(error);}
@@ -147,8 +158,8 @@ const Register = () => {
       <form className="row w-75 container container-md bg-white g-3 p-5 rounded" id="RegisterForm" onSubmit={handleSubmit}>
         <div className="heading_login">
           <h7>START FOR FREE</h7>
-          <h2>SIGN UP TO MATRIMONY</h2>
-          <h7>Already a member? <a href="./Login.html">Login</a></h7>
+          <h2>SignUp to India's most used blood donation Website</h2>
+          <h7>Already a member? <Link to="/login">Login</Link></h7>
         </div>
         <div className="col-12">
           <label htmlFor="name" className="form-label">Full Name</label>
@@ -207,18 +218,37 @@ const Register = () => {
           <label htmlFor="fatherName" className="form-label">Father's Name</label>
           <input type="text" className="form-control" id="fatherName" name="fatherName" onChange={handleChange} />
         </div>
+        {usertype && usertype === "Recipient" && (
         <div className="col-12">
           <label htmlFor="medicalCondition" className="form-label">Medical Condition</label>
-          <textarea className="form-control" id="medicalCondition" name="medicalCondition" onChange={handleChange} rows="3"></textarea>
+          <textarea
+            className="form-control"
+            id="medicalCondition"
+            name="medicalCondition"
+            value={formData.medicalCondition}
+            onChange={handleChange}
+            rows="3"
+          ></textarea>
         </div>
+      )}
+
+      {usertype && usertype === "Donor" && (
         <div className="col-12">
           <div className="form-check">
-            <input className="form-check-input" type="checkbox" id="gridCheck" name="available" checked={formData.available} onChange={e => setFormData({ ...formData, available: e.target.checked })} />
+            <input
+              className="form-check-input"
+              type="checkbox"
+              id="gridCheck"
+              name="available"
+              checked={formData.available}
+              onChange={e => setFormData({ ...formData, available: e.target.checked })}
+            />
             <label className="form-check-label" htmlFor="gridCheck">
               Available for blood donation
             </label>
           </div>
         </div>
+      )}
         <div className="col-12">
           <button type="submit" className="btn btn-primary">Register</button>
         </div>

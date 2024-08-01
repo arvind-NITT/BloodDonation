@@ -137,7 +137,12 @@ namespace BloodDonationBackend.Services
 
         public async Task<IEnumerable<ScheduleAppointmentReturnDTO>> ViewAppointments(int DonorId)
         {
-            var appointments = await Getappointmentsbyid(DonorId);
+            var id  = await _context.Donors.FirstOrDefaultAsync(d=> d.UserId == DonorId);
+            if(id == null)
+            {
+                throw new Exception("Null not found");
+            }
+            var appointments = await Getappointmentsbyid(id.DonorId);
             var appointmentDTOs = appointments.Select(a => new ScheduleAppointmentReturnDTO
             {
                 AppointmentId = a.AppointmentId,
@@ -155,6 +160,25 @@ namespace BloodDonationBackend.Services
                  .ToListAsync();
 
             return appointments;
+        }
+
+        public async Task<IEnumerable<BloodRequestReturnDTO>> RequestInMyDistrict(int userid)
+        {
+              var user = await _UserRepo.Get(userid);
+            var requests = await _context.BloodRequests.Where(a => a.State == user.state && a.District == user.District).ToListAsync();
+               
+            var result = requests.Select(request => new BloodRequestReturnDTO
+            {
+                RequestId = request.RequestId,
+                BloodType = request.BloodType,
+                Quantity = request.Quantity,
+                State = request.State,
+                District = request.District,
+                RequestDate = request.RequestDate,
+                IsUrgent = request.IsUrgent,
+                Status = request.Status
+            }).ToList();
+            return result;
         }
     }
 }

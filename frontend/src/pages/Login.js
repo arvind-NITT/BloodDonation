@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
+import BloodDonationContext from '../context/Contexts';
 import { redirect } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
+  const {  usertype } = useContext(BloodDonationContext);
+
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
   
@@ -47,8 +51,15 @@ const Login = () => {
    }
       localStorage.setItem('token', data.token);
       localStorage.setItem('UserID', data.UserID);
+      localStorage.setItem('Role', data.role);
+      console.log('Response:', data);
        alert("Login done");
-       navigate('/');
+       if(data.role === "Recipient")
+       navigate('/Recipient');
+       else if(data.role === "Donor")
+       navigate('/Donor');
+       else if(data.role === "Admin")
+       navigate('/Admin');
       }catch(error)
     {  console.error('Error:', error);
       alert(error);}
@@ -70,9 +81,9 @@ const Login = () => {
       </div>
       <form className="row w-75 container container-md bg-white g-3 p-5 rounded" id="RegisterForm" onSubmit={handleSubmit}>
         <div className="heading_login">
-          <h7>START FOR FREE</h7>
-          <h2>SIGN UP TO MATRIMONY</h2>
-          <h7>Already a member? <a href="./Login.html">Login</a></h7>
+          <h7>Welcome </h7>
+          <h2>Login to India's most used blood donation Website</h2>
+          <h7>New member? <Link to="/Register">Register</Link></h7>
         </div>
         <div className="col-md-6">
           <label htmlFor="contact" className="form-label">Contact Number</label>
