@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-  const {  usertype } = useContext(BloodDonationContext);
+  const {  usertype,setRole } = useContext(BloodDonationContext);
 
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -52,6 +52,7 @@ const Login = () => {
       localStorage.setItem('token', data.token);
       localStorage.setItem('UserID', data.UserID);
       localStorage.setItem('Role', data.role);
+      setRole(data.role);
       console.log('Response:', data);
        alert("Login done");
        if(data.role === "Recipient")
@@ -60,6 +61,8 @@ const Login = () => {
        navigate('/Donor');
        else if(data.role === "Admin")
        navigate('/Admin');
+       else if(data.role === "Bloodbank")
+       navigate('/BloodBank');
       }catch(error)
     {  console.error('Error:', error);
       alert(error);}
@@ -72,7 +75,7 @@ const Login = () => {
     <div className="container w-75 d-flex p-5">
       <div className="LeftContainer" style={{ fontFamily: 'Playfair Display, serif', backgroundColor: 'rgb(250, 210, 157)' }}>
         <h2>Now</h2>
-        <h1 style={{ color: 'rgb(68, 59, 51)', fontWeight: 800, fontSize: '55px' }}>Find Your Life Partner</h1>
+        <h1 style={{ color: 'rgb(68, 59, 51)', fontWeight: 800, fontSize: '55px' }}>Find Blood for You </h1>
         <h2>Easy and fast</h2>
         <div className="login_couple_photo">
           <img src="./Images/login-couple.png" alt="" style={{ width: '230px' }} />

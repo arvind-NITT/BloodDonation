@@ -7,7 +7,8 @@ namespace BloodDonationBackend.Modal
     {
         Admin,
         Donor,
-        Recipient
+        Recipient,
+        Bloodbank
     }
     public class User
     {

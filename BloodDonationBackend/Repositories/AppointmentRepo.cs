@@ -35,7 +35,7 @@ namespace BloodDonationBackend.Repositories
 
         public async Task<Appointment> Get(int key)
         {
-            return (await _context.Appointments.SingleOrDefaultAsync(m => m.AppointmentId == key)) ?? throw new Exception("No Match with the given ID");
+            return (await _context.Appointments.SingleOrDefaultAsync(m => m.AppointmentId == key)) ?? throw new Exception("No Appointment with the given ID");
 
         }
 
@@ -70,6 +70,7 @@ namespace BloodDonationBackend.Repositories
                 // Update properties
                 data.Location = item.Location;
                 data.AppointmentDate = item.AppointmentDate;
+                data.Status = item.Status;
 
                 _context.Entry(data).State = EntityState.Modified; // Mark entity as modified
                 await _context.SaveChangesAsync(); // Save changes to database

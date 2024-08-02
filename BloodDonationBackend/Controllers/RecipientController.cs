@@ -70,6 +70,27 @@ namespace BloodDonationBackend.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+         [Authorize]
+        [HttpPost("SearchForDonationCenters")]
+        [ProducesResponseType(typeof(IEnumerable<DonationCenterInventoryDTO>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<IActionResult> SearchForDonationCenter([FromBody] DonationCenterSearchDTO searchDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var result = await _RecipientService.SearchForDonationCenters(searchDTO);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
         [Authorize]
         [HttpGet("ViewRequest")]
         [ProducesResponseType(typeof(IEnumerable<BloodRequestReturnDTO>), 200)]

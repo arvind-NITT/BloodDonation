@@ -5,7 +5,9 @@ import BloodDonationContext from '../context/Contexts';
 import '../components/homestyles.css';
 
 const Home = () => {
-    const { fetchdonors, SearchDonationCenter, UpdateInfoForRecipient, ScheduleAppointment, RequestBlood, SearchForBlood, donors } = useContext(BloodDonationContext);
+    const { fetchdonors, SearchDonationCenter, UpdateInfoForRecipient,
+         ScheduleAppointment, RequestBlood, SearchForBlood, donors,
+         SearchDonationCenterNearMe ,DonationCenter} = useContext(BloodDonationContext);
 
 
 
@@ -79,6 +81,7 @@ const Home = () => {
         // Handle form submission logic here
         console.log(`State: ${selectedState}, District: ${selectedDistrict}, Blood Type: ${bloodType}`);
         fetchdonors({ state: selectedState, district: selectedDistrict, bloodType: bloodType })
+        SearchDonationCenterNearMe({ state: selectedState, district: selectedDistrict})
         console.log(donors);
 
     };
@@ -243,19 +246,53 @@ const Home = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            { donors && donors.map((item,index)=>(
+                            {donors && donors.map((item, index) => (
                                 <tr>
-                                <th id={index} key={index} scope="row">{index + 1}</th>
-                                <td>{item.donorName}</td>
-                                <td>{item.contactNumber}</td>
-                                <td>{item.available==true ? "Yes" : " No"}</td>
-                            </tr>
+                                    <th id={index} key={index} scope="row">{index + 1}</th>
+                                    <td>{item.donorName}</td>
+                                    <td>{item.contactNumber}</td>
+                                    <td>{item.available == true ? "Yes" : " No"}</td>
+                                </tr>
                             ))}
-                        
+
                         </tbody>
                     </table>
                 </div>
             </section>
+            <section>
+            <div className='container'>
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Center Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact Info</th>
+                            <th scope="col">Operating Hours</th>
+                            <th scope="col">Blood Inventories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {DonationCenter && DonationCenter.map((center, index) => (
+                            <tr key={center.centerId}>
+                                <th scope="row">{index + 1}</th>
+                                <td>{center.centerName}</td>
+                                <td>{center.address}</td>
+                                <td>{center.contactInfo}</td>
+                                <td>{center.operatingHours}</td>
+                                <td>
+                                    <ul>
+                                        {center.bloodInventories.map((inventory, idx) => (
+                                            <li key={idx}>{inventory.bloodType}: {inventory.quantity} units</li>
+                                        ))}
+                                    </ul>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </section>
         </>
     );
 };

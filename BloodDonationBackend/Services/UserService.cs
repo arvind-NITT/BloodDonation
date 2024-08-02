@@ -176,6 +176,38 @@ namespace BloodDonationBackend.Services
 
             return await query.ToListAsync();
         }
+
+        public async Task<IEnumerable<DonationCenterInventoryDTO>> SearchForDonationCenters(DonationCenterSearchDTO searchDTO)
+        {
+            var query = from dc in _context.DonationCenters
+                        join bi in _context.BloodInventorys on dc.CenterId equals bi.CenterId
+                        where dc.state == searchDTO.state
+                              && dc.District == searchDTO.District
+                        group bi by new
+                        {
+                            dc.CenterId,
+                            dc.Name,
+                            dc.Address,
+                            dc.ContactInfo,
+                            dc.OperatingHours
+                        } into g
+                        select new DonationCenterInventoryDTO
+                        {
+                            CenterId = g.Key.CenterId,
+                            CenterName = g.Key.Name,
+                            Address = g.Key.Address,
+                            ContactInfo = g.Key.ContactInfo,
+                            OperatingHours = g.Key.OperatingHours,
+                            BloodInventories = g.Select(bi => new BloodInventoryDTO
+                            {
+                                BloodType = bi.BloodType,
+                                Quantity = bi.Quantity
+                            }).ToList()
+                        };
+
+            return await query.ToListAsync();
+        }
+
     }
 }
 

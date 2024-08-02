@@ -6,6 +6,7 @@ namespace BloodDonationBackend.Models
     {
         [Key]
         public int CenterId { get; set; }
+        public int UserId { get; set; }
         public string Name { get; set; }
         public string state { get; set; }
         public string District { get; set; }

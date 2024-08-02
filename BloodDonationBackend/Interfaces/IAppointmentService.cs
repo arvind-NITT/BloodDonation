@@ -8,5 +8,7 @@ namespace BloodDonationBackend.Interfaces
         public Task<ScheduleAppointmentReturnDTO> ReScheduleAppointment(ScheduleAppointmentDTO scheduleAppointmentDTO);
         public Task<ScheduleAppointmentReturnDTO> CancelAppointment(int id);
 
+        public Task<ScheduleAppointmentReturnDTO> UpdateAppointment(int id);
+
     }
 }

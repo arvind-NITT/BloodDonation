@@ -7,6 +7,6 @@ namespace BloodDonationBackend.Interfaces
     {
         public Task<IEnumerable<AvailablityDTO>> CheckAvailability(CheckAvailabilityDTO checkAvailabilityDTO);
         public Task<ReturnInventoryDTO> UpdateInventory(UpdateInventoryDTO updateInventoryDTO);
-        public Task<ReturnInventoryDTO> AddInventory(UpdateInventoryDTO updateInventoryDTO);
+        public Task<ReturnInventoryDTO> AddInventory(AddInventoryDTO updateInventoryDTO);
     }
 }

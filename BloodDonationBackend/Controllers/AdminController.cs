@@ -1,5 +1,7 @@
 ﻿using BloodDonationBackend.Interfaces;
+using BloodDonationBackend.Models;
 using BloodDonationBackend.Models.DTOs;
+using BloodDonationBackend.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -35,5 +37,23 @@ namespace BloodDonationBackend.Controllers
                 return StatusCode(500, "An error occurred while adding the donation center.");
             }
         }
+
+
+        [HttpPost("AddBloodbank")]
+        [ProducesResponseType(typeof(LoginReturnDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<LoginReturnDTO>> Register(UserRegisterDTO userDTO)
+        {
+            try
+            {
+                LoginReturnDTO result = await _AdminService.RegisterBloodBank(userDTO);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ErrorModel(501, ex.Message));
+            }
+        }
+
     }
 }

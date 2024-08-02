@@ -11,6 +11,7 @@ namespace BloodDonationBackend.Interfaces
         //Task ApproveUserProfileAsync(int userId);
         Task DeleteUserAsync(int userId);
         Task<DonationCenterDTO> AddDonationCenter(DonationCenterDTO donationCenterDTO);
+        public Task<LoginReturnDTO> RegisterBloodBank(UserRegisterDTO userDTO);
         public Task<ReturnInventoryDTO> AddBloodInventory(UpdateInventoryDTO updateInventoryDTO);
     }
 }

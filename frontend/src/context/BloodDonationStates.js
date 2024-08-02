@@ -6,11 +6,15 @@ import BloodDonationContext from './Contexts';
 const BloodDonationStates = ({ children }) => {
 
   const [usertype, setusertype] = useState('');
+  const [Role, setRole] = useState("Null");
+  const [AvailableBlood, setAvailableBlood] = useState([]);
   const [bloodType, setBloodType] = useState('');
   const [donors, setDonors] = useState([]);
   const [DonationCenter, setDonationCenter] = useState([]);
+  const [RecipientDonationCenter, setRecipientDonationCenter] = useState([]);
   const [Appointments, setAppointments] = useState([]);
-  const [AllAppointments, setAllAppointments] = useState([]);
+  const [AllAppointments, setAllAppointments] = useState(null);
+  const [AllBloodbankAppointments, setAllBloodbankAppointments] = useState([]);
   const [Request, setRequests] = useState([]);
   const [RequestInmyDistrict, setRequestInmyDistrict] = useState([]);
   const [AllRequests, setAllRequests] = useState([]);
@@ -51,6 +55,46 @@ const BloodDonationStates = ({ children }) => {
      
    }
    const token = localStorage.getItem('token');
+   const SearchDonationCenterNearMe= async(item)=>{
+
+       const url= `${BACKENDLINK}/api/User/DonationCenterSearch`;
+      const response= await fetch(url,{
+       method: 'POST', // *GET, POST, PUT, DELETE, etc.
+       headers:{
+           'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+
+       },
+       body: JSON.stringify({
+        "state": item.state,
+        "district": item.district
+       })
+      })
+      const result= await response.json();
+      setDonationCenter(result);  
+      console.log(result);
+   }
+   const SearchDonationCenterNearMeForRecipient= async(item)=>{
+
+       const url= `${BACKENDLINK}/api/Recipient/SearchForDonationCenters`;
+      const response= await fetch(url,{
+       method: 'POST', // *GET, POST, PUT, DELETE, etc.
+       headers:{
+           'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+        'Authorization': `Bearer ${token}`
+       },
+       body: JSON.stringify({
+        "state": item.state,
+        "district": item.district
+       })
+      })
+      const result= await response.json();
+      setRecipientDonationCenter(result);  
+      console.log(result);
+   }
    const SearchDonationCenter= async(item)=>{
 
        const url= `${BACKENDLINK}/api/Donor/SearchDonationCenter`;
@@ -72,6 +116,36 @@ const BloodDonationStates = ({ children }) => {
       console.log(result);
    }
    const ScheduleAppointmentforme= async(item)=>{
+
+    const today = new Date();
+  const maxDate = new Date();
+  maxDate.setDate(today.getDate() + 180);
+
+  const appointmentDate = new Date(item.date);
+
+  if (appointmentDate <= today) {
+    console.error('Appointment date must be greater than today.');
+    alert('Appointment date must be greater than today.')
+    return;
+  }
+
+  if (appointmentDate > maxDate) {
+    console.error('Appointment date cannot be more than 180 days from today.');
+    alert("Appointment date cannot be more than 180 days from today.");
+    return;
+  }
+  const sixtyDaysInMilliseconds = 60 * 24 * 60 * 60 * 1000;
+  for (let appointment of AllAppointments) {
+    const existingAppointmentDate = new Date(appointment.appointmentDate);
+    console.log(appointmentDate,existingAppointmentDate);
+    const differenceInTime = Math.abs(appointmentDate - existingAppointmentDate);
+     
+    if (differenceInTime < sixtyDaysInMilliseconds) {
+      console.error('The new appointment date must be at least 60 days apart from any existing appointment.');
+      return;
+    }
+  }
+
        const url= `${BACKENDLINK}/api/Donor/ScheduleAppointment`;
       const response= await fetch(url,{
        method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -86,9 +160,10 @@ const BloodDonationStates = ({ children }) => {
         "date": item.date
        })
       })
-      const result= await response.json();
-      setAppointments(result);  
-      console.log(result);
+      const newAppointment= await response.json();
+      setAppointments(newAppointment);  
+      setAllAppointments((prevAllAppointments) => [...prevAllAppointments, newAppointment]);
+      console.log(newAppointment);
    }
    const RequestBlood= async(item)=>{
        const url= `${BACKENDLINK}/api/Recipient/RequestBlood`;
@@ -184,6 +259,7 @@ const BloodDonationStates = ({ children }) => {
       })
       const result= await response.json();
       setAllAppointments(result);  
+      
       console.log(result);
    }
    const ViewRequest= async()=>{
@@ -200,6 +276,80 @@ const BloodDonationStates = ({ children }) => {
       const result= await response.json();
       setAllRequests(result);  
       console.log(result);
+   }
+   const CancelmyAppointment= async(item)=>{
+       const url= `${BACKENDLINK}/api/Donor/CancelAppointment`;
+      const response= await fetch(url,{
+       method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+       headers:{
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+        'Authorization': `Bearer ${token}`
+       },
+       body: JSON.stringify({
+        Appointmentid:item
+       })
+      })
+      const result= await response.json();
+      // setBloodSearch(result);  
+      donorViewAppointment();
+   }
+   const ReschedulemyAppointment= async(item)=>{
+
+    const today = new Date();
+    const maxDate = new Date();
+    maxDate.setDate(today.getDate() + 180);
+  
+    const appointmentDate = new Date(item.date);
+  
+    if (appointmentDate <= today) {
+      console.error('Appointment date must be greater than today.');
+      alert('Appointment date must be greater than today.')
+      return;
+    }
+  
+    if (appointmentDate > maxDate) {
+      console.error('Appointment date cannot be more than 180 days from today.');
+      alert("Appointment date cannot be more than 180 days from today.");
+      return;
+    }
+    const sixtyDaysInMilliseconds = 60 * 24 * 60 * 60 * 1000;
+    for (let appointment of AllAppointments) {
+      console.log(appointment.appointmentId, item.centerid);
+      if(appointment.appointmentId === item.centerid){
+        console.log(appointment.appointmentId, item.centerid);
+        continue;
+      }
+
+      const existingAppointmentDate = new Date(appointment.appointmentDate);
+      console.log(appointmentDate,existingAppointmentDate);
+      const differenceInTime = Math.abs(appointmentDate - existingAppointmentDate);
+       
+      if (differenceInTime < sixtyDaysInMilliseconds) {
+        console.error('The new appointment date must be at least 60 days apart from any existing appointment.');
+        return;
+      }
+    }
+
+
+       const url= `${BACKENDLINK}/api/Donor/ReScheduleAppointment`;
+      const response= await fetch(url,{
+       method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+       headers:{
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+        'Authorization': `Bearer ${token}`
+       },
+       body: JSON.stringify({
+        "centerId": item.centerid,
+        "date": item.date
+       })
+      })
+      const result= await response.json();
+      // setBloodSearch(result);  
+      donorViewAppointment();
    }
    const UpdateInfoForDonor= async(item)=>{
        const url= `${BACKENDLINK}/api/Donor/UpdateInfo`;
@@ -246,12 +396,143 @@ const BloodDonationStates = ({ children }) => {
       console.log(result);
    }
 
+  //----------------------------------------------------------------------//
+  const BloodbankAllAppointment= async()=>{
+    const url= `${BACKENDLINK}/api/BloodBank/ViewAppointment`;
+   const response= await fetch(url,{
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    headers:{
+     'Content-Type': 'application/json',
+     'Accept': 'application/json',
+     'Access-Control-Allow-Origin': "*",
+     'Authorization': `Bearer ${token}`
+    },
+   })
+   const result= await response.json();
+   setAllBloodbankAppointments(result);  
+   
+   console.log(result);
+}
+const AppointmentUpdateByBloodBank= async(item)=>{
+  const url= `${BACKENDLINK}/api/BloodBank/UpdateAppointment`;
+ const response= await fetch(url,{
+  method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+  headers:{
+   'Content-Type': 'application/json',
+   'Accept': 'application/json',
+   'Access-Control-Allow-Origin': "*",
+   'Authorization': `Bearer ${token}`
+  },
+  body: JSON.stringify({
+   Appointmentid:item
+  })
+ })
+ const result= await response.json();
+ // setBloodSearch(result);  
+ BloodbankAllAppointment();
+}
+const AppointmentCencelledByBloodBank= async(item)=>{
+  const url= `${BACKENDLINK}/api/BloodBank/CancelAppointment`;
+ const response= await fetch(url,{
+  method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+  headers:{
+   'Content-Type': 'application/json',
+   'Accept': 'application/json',
+   'Access-Control-Allow-Origin': "*",
+   'Authorization': `Bearer ${token}`
+  },
+  body: JSON.stringify({
+   Appointmentid:item
+  })
+ })
+ const result= await response.json();
+ // setBloodSearch(result);  
+ BloodbankAllAppointment();
+}
+const RescheduleAppointmentByBloodBank= async(item)=>{
+
+  const today = new Date();
+  const maxDate = new Date();
+  maxDate.setDate(today.getDate() + 180);
+
+  const appointmentDate = new Date(item.date);
+
+  if (appointmentDate <= today) {
+    console.error('Appointment date must be greater than today.');
+    alert('Appointment date must be greater than today.')
+    return;
+  }
+
+  if (appointmentDate > maxDate) {
+    console.error('Appointment date cannot be more than 180 days from today.');
+    alert("Appointment date cannot be more than 180 days from today.");
+    return;
+  }
+  const sixtyDaysInMilliseconds = 60 * 24 * 60 * 60 * 1000;
+  for (let appointment of AllBloodbankAppointments) {
+    console.log(appointment.appointmentId, item.centerid);
+    if(appointment.appointmentId === item.centerid){
+      console.log(appointment.appointmentId, item.centerid);
+      continue;
+    }
+
+    const existingAppointmentDate = new Date(appointment.appointmentDate);
+    console.log(appointmentDate,existingAppointmentDate);
+    const differenceInTime = Math.abs(appointmentDate - existingAppointmentDate);
+     
+    if (differenceInTime < sixtyDaysInMilliseconds) {
+      console.error('The new appointment date must be at least 60 days apart from any existing appointment.');
+      alert("The new appointment date must be at least 60 days apart from any existing appointment.");
+      return;
+    }
+  }
+
+
+     const url= `${BACKENDLINK}/api/BloodBank/ReScheduleAppointment`;
+    const response= await fetch(url,{
+     method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+     headers:{
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin': "*",
+      'Authorization': `Bearer ${token}`
+     },
+     body: JSON.stringify({
+      "centerId": item.centerid,
+      "date": item.date
+     })
+    })
+    const result= await response.json();
+    // setBloodSearch(result);  
+    BloodbankAllAppointment();
+ }
+
+ const AvailabilityCheck = async()=>{
+  const url= `${BACKENDLINK}/api/BloodBank/BloodAvailabilityInInventories`;
+  const response= await fetch(url,{
+   method: 'GET', // *GET, POST, PUT, DELETE, etc.
+   headers:{
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Access-Control-Allow-Origin': "*",
+    'Authorization': `Bearer ${token}`
+   },
+  })
+  const result= await response.json();
+  setAvailableBlood(result);  
+  
+  console.log(result);
+ }
+
 
   return (
     <BloodDonationContext.Provider value={{setusertype,usertype,DonationCenter, UpdateInfoForRecipient,bloodType,
     fetchdonors, setBloodType,SearchDonationCenter,ScheduleAppointmentforme,RequestBlood,
     SearchForBlood, donors, addDonor, isLoading, setIsLoading , AllRequests, ViewRequest,addDonationCenter,donorViewRequest
-    ,donorViewAppointment,UpdateInfoForDonor,AllAppointments,RequestInmyDistrict}}>
+    ,donorViewAppointment,UpdateInfoForDonor,AllAppointments,RequestInmyDistrict,CancelmyAppointment,ReschedulemyAppointment,
+    AllBloodbankAppointments,AppointmentCencelledByBloodBank,
+    AppointmentUpdateByBloodBank,BloodbankAllAppointment,RescheduleAppointmentByBloodBank,AvailabilityCheck,AvailableBlood,
+    SearchDonationCenterNearMe,SearchDonationCenterNearMeForRecipient,RecipientDonationCenter,setRole,Role}}>
       {children}
     </BloodDonationContext.Provider>
   );

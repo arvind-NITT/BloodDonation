@@ -70,8 +70,9 @@ namespace BloodDonationBackend
             builder.Services.AddScoped<IDonorService, DonorService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IRecipientService, RecipientService>();
-            //builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
-            //builder.Services.AddScoped<ITransactionService, TransactionService>();
+            builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+            builder.Services.AddScoped<IBloodBankservice, BloodBankService>();
+            builder.Services.AddScoped<IBloodInventoryService, BloodInventoryServices>();
             builder.Services.AddScoped<IAdminInterface, AdminService>();
 
             #endregion

@@ -56,7 +56,7 @@ namespace BloodDonationBackend.Controllers
             }
         }
         [HttpPost("DonorSearch")]
-        [ProducesResponseType(typeof(LoginReturnDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(DonorSearchReturnDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<DonorSearchReturnDTO>> DonorSearch(DonorSearchDTO userDTO)
         {
@@ -64,6 +64,22 @@ namespace BloodDonationBackend.Controllers
             {
                 Console.WriteLine("reaching here");
                 var result = await _userService.SearchForDonor(userDTO);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ErrorModel(501, ex.Message));
+            }
+        } 
+        [HttpPost("DonationCenterSearch")]
+        [ProducesResponseType(typeof(DonorSearchReturnDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<DonorSearchReturnDTO>> DonationCenterSearch(DonationCenterSearchDTO userDTO)
+        {
+            try
+            {
+                Console.WriteLine("reaching here");
+                var result = await _userService.SearchForDonationCenters(userDTO);
                 return Ok(result);
             }
             catch (Exception ex)

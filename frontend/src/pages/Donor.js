@@ -6,7 +6,7 @@ import BloodDonationContext from '../context/Contexts';
 const Donor = () => {
 
     const { SearchDonationCenter, DonationCenter, ScheduleAppointmentforme, donorViewRequest, donorViewAppointment,
-        RequestInmyDistrict, AllAppointments
+        RequestInmyDistrict, AllAppointments,CancelmyAppointment,ReschedulemyAppointment
     } = useContext(BloodDonationContext);
 
     useEffect(() => {
@@ -55,6 +55,8 @@ const Donor = () => {
     const [bloodType, setBloodType] = useState('');
     const [appointmentdate, setappointmentdate] = useState('');
     const [centerid, setcenterid] = useState('');
+    const [reappointmentdate, setreappointmentdate] = useState('');
+    const [recenterid, setrecenterid] = useState('');
 
     useEffect(() => {
         if (selectedState) {
@@ -73,6 +75,10 @@ const Donor = () => {
         setappointmentdate(e.target.value);
         console.log(e.target.value);
     };
+    const handleredateChange = (e) => {
+        setreappointmentdate(e.target.value);
+        console.log(e.target.value);
+    };
     const handleStateChange = (e) => {
         setSelectedState(e.target.value);
         setSelectedDistrict(''); // Reset district selection when state changes
@@ -81,10 +87,6 @@ const Donor = () => {
     const handleDistrictChange = (e) => {
         setSelectedDistrict(e.target.value);
     };
-
-    // const handleBloodTypeChange = (e) => {
-    //     setBloodType(e.target.value);
-    // };
 
      const changedivvisibilty =()=>{
         if(viewrequestdiv==true){
@@ -105,12 +107,14 @@ const Donor = () => {
 
     };
     const ScheduleAppointment = (e) => {
-        // Handle form submission logic here
         console.log(`date: ${appointmentdate},centerid: ${centerid}`);
         ScheduleAppointmentforme({ centerid: centerid, date: appointmentdate });
-        // console.log(DonationCenter);
-
     };
+
+    const ReschedulemyAppointment1 =()=>{
+        console.log(`date: ${reappointmentdate},centerid: ${recenterid}`);
+        ReschedulemyAppointment({ centerid: recenterid, date: reappointmentdate });
+    }
     return (
         <>
             <Navbar />
@@ -119,12 +123,12 @@ const Donor = () => {
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Date Of Appointment</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div className="col-md-6">
-                                    <label htmlFor="dateOfBirth" className="form-label">Date Of Appointment</label>
+                                    <label htmlFor="dateOfBirth" className="form-label">maximum allowed date (180 days from today)</label>
                                     <input type="date" className="form-control" id="dateOfBirth" name="dateOfAppointment" onChange={handledateChange} />
                                 </div>
                             </div>
@@ -135,6 +139,27 @@ const Donor = () => {
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Reschedule Date</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div className="col-md-6">
+                                    <label htmlFor="dateOfBirth" className="form-label">maximum allowed date (180 days from today)</label>
+                                    <input type="date" className="form-control" id="dateOfBirth" name="dateOfAppointment" onChange={handleredateChange} />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onClick={ReschedulemyAppointment1}>Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <section>
                     <h2>Looking for Donation</h2>
                     <div className='container donationcenters'>
@@ -189,7 +214,7 @@ const Donor = () => {
                                                 <td>{item.address}</td>
                                                 <td>{item.operatingHours}</td>
                                                 <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" onClick={() => setcenterid(item.centerId)} data-bs-target="#exampleModal">
-                                                    Launch demo modal
+                                                    Schedule Appointment
                                                 </button></td>
                                             </tr>
                                         ))}
@@ -200,7 +225,6 @@ const Donor = () => {
                         </section>
                     </div>
                 </section>
-
 
                 <section>
                     <div className='container'>
@@ -253,6 +277,8 @@ const Donor = () => {
                                             <th scope="col">Date</th>
                                             <th scope="col">Location</th>
                                             <th scope="col">Status</th>
+                                            <th scope="col">Reschedule</th>
+                                            <th scope="col">Cancel</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -262,10 +288,14 @@ const Donor = () => {
                                                 <td>{item.appointmentDate}</td>
                                                 <td>{item.location}</td>
                                                  <td>{item.status}</td>
+                                                 <td>
+                                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" onClick={() => setrecenterid(item.appointmentId)} data-bs-target="#exampleModal1">
+                                                    Reschedule
+                                                </button>
+                                                </td>
+                                                 <td><button type="button" class="btn btn-danger" onClick={()=> CancelmyAppointment(item.appointmentId)}>Cancel</button></td>
                                             </tr>
                                         ))}
-                                    
-
                                     </tbody>
                                 </table>
 

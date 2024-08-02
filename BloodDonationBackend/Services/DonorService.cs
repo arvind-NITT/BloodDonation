@@ -14,14 +14,18 @@ namespace BloodDonationBackend.Services
         private readonly IRepository<int, Appointment> _AppointmentRepo;
         private readonly IRepository<int, Donor> _DonorRepo;
         private readonly IRepository<int, User> _UserRepo;
+        private readonly IAppointmentService _AppointmentService;
 
-        public DonorService(BloodDonationContext context, IRepository<int, DonationCenter> DonationCenterRepo, IRepository<int, Appointment> appointmentRepo, IRepository<int, Donor> donorRepo, IRepository<int, User> userRepo)
+        public DonorService(BloodDonationContext context, IRepository<int,
+            DonationCenter> DonationCenterRepo, IRepository<int, Appointment> appointmentRepo,
+            IRepository<int, Donor> donorRepo, IRepository<int, User> userRepo, IAppointmentService appointmentService)
         {
             _context = context;
             _DonationCenterRepo = DonationCenterRepo;
             _AppointmentRepo = appointmentRepo;
             _DonorRepo = donorRepo;
             _UserRepo = userRepo;
+            _AppointmentService = appointmentService;
         }
 
         public async Task<ScheduleAppointmentReturnDTO> ScheduleAppointment(ScheduleAppointmentDTO scheduleAppointmentDTO)
@@ -179,6 +183,16 @@ namespace BloodDonationBackend.Services
                 Status = request.Status
             }).ToList();
             return result;
+        }
+
+        public async Task<ScheduleAppointmentReturnDTO> ReScheduleAppointment(ScheduleAppointmentDTO scheduleAppointmentDTO)
+        {
+            return await _AppointmentService.ReScheduleAppointment(scheduleAppointmentDTO);
+        }
+
+        public async Task<ScheduleAppointmentReturnDTO> CancelAppointment(CancleAppointmentDTO cancleAppointmentDTO)
+        {
+            return await _AppointmentService.CancelAppointment(cancleAppointmentDTO.Appointmentid);
         }
     }
 }

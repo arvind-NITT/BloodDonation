@@ -5,7 +5,7 @@ import BloodDonationContext from '../context/Contexts';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 const Register = () => {
-  const {usertype } = useContext(BloodDonationContext);
+  const {usertype,setRole } = useContext(BloodDonationContext);
 
   useEffect(() => {
     console.log(usertype);
@@ -120,6 +120,7 @@ const Register = () => {
       console.log('Response:', data);
       localStorage.setItem('token', data.token);
       localStorage.setItem('UserID', data.UserID);
+      setRole(data.role);
        alert("Registration done");
        if(data.role === "Recipient")
         navigate('/Recipient');

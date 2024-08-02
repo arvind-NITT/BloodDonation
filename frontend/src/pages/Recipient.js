@@ -6,23 +6,22 @@ import '../components/homestyles.css';
 
 const Recipient = () => {
 
-    const { fetchdonors, SearchDonationCenter, UpdateInfoForRecipient, ScheduleAppointment, RequestBlood, SearchForBlood, donors, AllRequests, ViewRequest } = useContext(BloodDonationContext);
+    const { fetchdonors, SearchDonationCenter, UpdateInfoForRecipient,
+         ScheduleAppointment, RequestBlood, SearchForBlood, donors, AllRequests,
+          ViewRequest,SearchDonationCenterNearMeForRecipient,RecipientDonationCenter,setRole,Role } = useContext(BloodDonationContext);
 
     useEffect(() => {
         ViewRequest();
+
     }, []);
 
     const [RequestData, setRequestData] = useState({
-        
         state: '',
         district: '',
         bloodType: '',
         Quantity:0,
         IsUrgent: true,
       });
-
-
-     
 
     const [states, setStates] = useState([
         { name: 'Andhra Pradesh', districts: ['Anantapur', 'Chittoor', 'East Godavari', 'Guntur', 'Krishna', 'Kurnool', 'Prakasam', 'Srikakulam', 'Sri Potti Sriramulu Nellore', 'Visakhapatnam', 'Vizianagaram', 'West Godavari', 'YSR Kadapa'] },
@@ -62,7 +61,8 @@ const Recipient = () => {
     const [districts, setDistricts] = useState([]);
     const [selectedDistrict, setSelectedDistrict] = useState('');
     const [bloodType, setBloodType] = useState('');
-
+    const [searching, setsearching] = useState(false);
+    
     useEffect(() => {
         if (selectedState) {
             const stateData = states.find(state => state.name === selectedState);
@@ -93,7 +93,9 @@ const Recipient = () => {
         e.preventDefault();
         // Handle form submission logic here
         console.log(`State: ${selectedState}, District: ${selectedDistrict}, Blood Type: ${bloodType}`);
-        fetchdonors({ state: selectedState, district: selectedDistrict, bloodType: bloodType })
+        fetchdonors({ state: selectedState, district: selectedDistrict, bloodType: bloodType });
+        SearchDonationCenterNearMeForRecipient({ state: selectedState, district: selectedDistrict});
+        setsearching(true);
         console.log(donors);
 
     };
@@ -268,14 +270,15 @@ const Recipient = () => {
                         </div>
 
                         <div className="col-12">
-                            <button type="submit" className="btn btn-primary">Search Donors</button>
+                            <button type="submit" className="btn btn-primary">Search </button>
                         </div>
                     </form>
                 </div>
             </section>
 
-            <section>
+         {searching &&    <section>
                 <div className='container'>
+                    <h2>Donor's</h2>
                     <table class="table">
                         <thead>
                             <tr>
@@ -298,7 +301,42 @@ const Recipient = () => {
                         </tbody>
                     </table>
                 </div>
-            </section>
+            </section>}
+           { searching &&  <section>
+            <div className='container'>
+            <h2>Donation Center's</h2>
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Center Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact Info</th>
+                            <th scope="col">Operating Hours</th>
+                            <th scope="col">Blood Inventories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {RecipientDonationCenter && RecipientDonationCenter.map((center, index) => (
+                            <tr key={center.centerId}>
+                                <th scope="row">{index + 1}</th>
+                                <td>{center.centerName}</td>
+                                <td>{center.address}</td>
+                                <td>{center.contactInfo}</td>
+                                <td>{center.operatingHours}</td>
+                                <td>
+                                    <ul>
+                                        {center.bloodInventories.map((inventory, idx) => (
+                                            <li key={idx}>{inventory.bloodType}: {inventory.quantity} units</li>
+                                        ))}
+                                    </ul>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </section>}
         </>
     );
 }
