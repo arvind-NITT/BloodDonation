@@ -3,12 +3,20 @@ import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import BloodDonationContext from '../context/Contexts';
 import '../components/homestyles.css';
-
+import Footer from '../components/Footer';
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+  };
 const Recipient = () => {
 
     const { fetchdonors, SearchDonationCenter, UpdateInfoForRecipient,
          ScheduleAppointment, RequestBlood, SearchForBlood, donors, AllRequests,
-          ViewRequest,SearchDonationCenterNearMeForRecipient,RecipientDonationCenter,setRole,Role } = useContext(BloodDonationContext);
+          ViewRequest,SearchDonationCenterNearMeForRecipient,RecipientDonationCenter,setRole,
+          Role,CancelmyRequest,FullfilledmyRequest,BloodSearch } = useContext(BloodDonationContext);
 
     useEffect(() => {
         ViewRequest();
@@ -93,7 +101,7 @@ const Recipient = () => {
         e.preventDefault();
         // Handle form submission logic here
         console.log(`State: ${selectedState}, District: ${selectedDistrict}, Blood Type: ${bloodType}`);
-        fetchdonors({ state: selectedState, district: selectedDistrict, bloodType: bloodType });
+        SearchForBlood({ state: selectedState, district: selectedDistrict, bloodType: bloodType });
         SearchDonationCenterNearMeForRecipient({ state: selectedState, district: selectedDistrict});
         setsearching(true);
         console.log(donors);
@@ -205,19 +213,23 @@ const Recipient = () => {
                                 <th scope="col">RequestDate</th>
                                 <th scope="col">IsUrgent</th>
                                 <th scope="col">Status</th>
+                                <th scope="col">Cancel</th>
+                                <th scope="col">Fullfilled</th>
                             </tr>
                         </thead>
                         <tbody>
                             {AllRequests && AllRequests.map((item, index) => (
-                                <tr>
+                               item.status==="Pending" &&  <tr>
                                     <th id={index} key={index} scope="row">{index + 1}</th>
                                     <td>{item.bloodType}</td>
                                     <td>{item.state}</td>
                                     <td>{item.district}</td>
                                     <td>{item.quantity}</td>
-                                    <td>{item.requestDate}</td>
+                                    <td>{formatDate(item.requestDate)}</td>
                                     <td>{item.isUrgent == true ? "Yes" : " No"}</td>
                                     <td>{item.status}</td>
+                                   <td><button type="button" class="btn btn-danger" onClick={()=> CancelmyRequest(item.requestId)}>Cancel</button></td>
+                                   <td><button type="button" class="btn btn-danger" onClick={()=> FullfilledmyRequest(item.requestId)}>Fullfilled</button></td>
                                 </tr>
                             ))}
                             <tr>
@@ -232,7 +244,7 @@ const Recipient = () => {
             </section>
 
             <section>
-                <div className='find-donor container'>
+                <div className='find-donor container mb-3'>
                     <form className="row g-3" onSubmit={handleSubmit}>
                         <div className="col-md-4">
                             <label htmlFor="inputState" className="form-label">State</label>
@@ -277,7 +289,7 @@ const Recipient = () => {
             </section>
 
          {searching &&    <section>
-                <div className='container'>
+                <div className='container mb-3'>
                     <h2>Donor's</h2>
                     <table class="table">
                         <thead>
@@ -285,15 +297,17 @@ const Recipient = () => {
                                 <th scope="col">No.</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Contact Number</th>
+                                <th scope="col">lastDonationDate</th>
                                 <th scope="col">Availability</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {donors && donors.map((item, index) => (
+                            {BloodSearch && BloodSearch.map((item, index) => (
                                 <tr>
                                     <th id={index} key={index} scope="row">{index + 1}</th>
                                     <td>{item.donorName}</td>
                                     <td>{item.contactNumber}</td>
+                                    <td>{  formatDate(item.lastDonationDate)}</td>
                                     <td>{item.available == true ? "Yes" : " No"}</td>
                                 </tr>
                             ))}
@@ -303,7 +317,7 @@ const Recipient = () => {
                 </div>
             </section>}
            { searching &&  <section>
-            <div className='container'>
+            <div className='container mb-3'>
             <h2>Donation Center's</h2>
                 <table className="table">
                     <thead>
@@ -337,6 +351,7 @@ const Recipient = () => {
                 </table>
             </div>
         </section>}
+        <Footer/>
         </>
     );
 }

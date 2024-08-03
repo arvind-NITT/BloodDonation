@@ -2,11 +2,19 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import Navbar from '../components/Navbar';
 import BloodDonationContext from '../context/Contexts';
-
+import Footer from '../components/Footer';
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+  };
 const Donor = () => {
 
     const { SearchDonationCenter, DonationCenter, ScheduleAppointmentforme, donorViewRequest, donorViewAppointment,
-        RequestInmyDistrict, AllAppointments,CancelmyAppointment,ReschedulemyAppointment
+        RequestInmyDistrict, AllAppointments,CancelmyAppointment,ReschedulemyAppointment,
+          DonorwantstoseeAppointments,setDonorwantstoseeAppointments
     } = useContext(BloodDonationContext);
 
     useEffect(() => {
@@ -57,7 +65,7 @@ const Donor = () => {
     const [centerid, setcenterid] = useState('');
     const [reappointmentdate, setreappointmentdate] = useState('');
     const [recenterid, setrecenterid] = useState('');
-
+    const [searching, setsearching] = useState(false);
     useEffect(() => {
         if (selectedState) {
             const stateData = states.find(state => state.name === selectedState);
@@ -103,6 +111,7 @@ const Donor = () => {
         // Handle form submission logic here
         console.log(`State: ${selectedState}, District: ${selectedDistrict}`);
         SearchDonationCenter({ state: selectedState, district: selectedDistrict })
+        setsearching(true);
         console.log(DonationCenter);
 
     };
@@ -115,6 +124,14 @@ const Donor = () => {
         console.log(`date: ${reappointmentdate},centerid: ${recenterid}`);
         ReschedulemyAppointment({ centerid: recenterid, date: reappointmentdate });
     }
+
+    // const formatDate = (dateString) => {
+    //     const date = new Date(dateString);
+    //     const day = String(date.getDate()).padStart(2, '0');
+    //     const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+    //     const year = date.getFullYear();
+    //     return `${day}-${month}-${year}`;
+    //   };
     return (
         <>
             <Navbar />
@@ -193,7 +210,7 @@ const Donor = () => {
                         </section>
 
                         <section>
-                            <div className='container'>
+                          {searching &&  <div className='container'>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -221,14 +238,14 @@ const Donor = () => {
 
                                     </tbody>
                                 </table>
-                            </div>
+                            </div>}
                         </section>
                     </div>
                 </section>
 
                 <section>
-                    <div className='container'>
-                        <div className='heading-option'>
+                    <div className='container mt-5'>
+                        <div className='heading-option d-flex justify-content-around'>
                             <button type="button" class="btn btn-outline-secondary" onClick={changedivvisibilty} >New Requests</button>
                             <button type="button" class="btn btn-outline-success" onClick={changedivvisibilty}>Your Appointments</button>
                         </div>
@@ -239,6 +256,8 @@ const Donor = () => {
                                     <thead>
                                         <tr>
                                             <th scope="col">No.</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Contact</th>
                                             <th scope="col">BloodType</th>
                                             <th scope="col">State</th>
                                             <th scope="col">District</th>
@@ -250,13 +269,15 @@ const Donor = () => {
                                     </thead>
                                     <tbody>
                                         {RequestInmyDistrict && RequestInmyDistrict.map((item, index) => (
-                                            <tr>
+                                          item.status==="Pending" &&  <tr>
                                                 <th id={index} key={index} scope="row">{index + 1}</th>
+                                                <td>{item.name}</td>
+                                                <td>{item.contact}</td>
                                                 <td>{item.bloodType}</td>
                                                 <td>{item.state}</td>
                                                 <td>{item.district}</td>
                                                 <td>{item.quantity}</td>
-                                                <td>{item.requestDate}</td>
+                                                <td>{formatDate(item.requestDate)}</td>
                                                 <td>{item.isUrgent == true ? "Yes" : " No"}</td>
                                                 <td>{item.status}</td>
                                             </tr>
@@ -268,7 +289,7 @@ const Donor = () => {
 
                             </div>}
                           {viewappointmentdiv &&   <div className='content'>
-                                <h2>Your Appointments</h2>
+                                <h2>Your upcoming Appointments</h2>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -283,9 +304,9 @@ const Donor = () => {
                                     </thead>
                                     <tbody>
                                         {AllAppointments && AllAppointments.map((item, index) => (
-                                            <tr>
+                                           item.status==="Scheduled" && <tr>
                                                 <th id={index} key={index} scope="row">{index + 1}</th>
-                                                <td>{item.appointmentDate}</td>
+                                                <td>{formatDate(item.appointmentDate)}</td>
                                                 <td>{item.location}</td>
                                                  <td>{item.status}</td>
                                                  <td>
@@ -303,9 +324,43 @@ const Donor = () => {
                         </div>
                     </div>
                 </section>
+           { DonorwantstoseeAppointments===true &&    <section>
+                    <div className='container'>
+                       
+                        <div className='donor-content'>
+
+                          {  <div className='content'>
+                                <h2>All Appointments</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No.</th>
+                                           
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col">Status</th>
+                                       
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {AllAppointments && AllAppointments.map((item, index) => (
+                                           <tr>
+                                                <th id={index} key={index} scope="row">{index + 1}</th>
+                                                <td>{formatDate(item.appointmentDate)}</td>
+                                                <td>{item.location}</td>
+                                                 <td>{item.status}</td>
+                                             </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+
+                            </div>}
+                        </div>
+                    </div>
+                </section>}
             </div>
 
-
+     <Footer/>
         </>
     );
 }

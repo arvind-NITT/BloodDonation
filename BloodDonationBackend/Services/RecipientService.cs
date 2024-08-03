@@ -106,11 +106,16 @@ namespace BloodDonationBackend.Services
             {
                 query = query.Where(dc => dc.BloodType.ToLower() == donorSearchDTO.BloodType.ToLower());
             }
+            foreach (var item in query)
+            {
+                Console.WriteLine($"DonorId: {item.DonorId}, LastDonationDate: {item.LastDonationDate}");
+            }
             var result = await query.Select(dc => new DonorSearchReturnDTO
             {
                 DonorId = dc.DonorId,
                 DonorName = dc.Name,
-                ContactNumber = dc.PhoneNumber, // Ensure PhoneNumber is available in the query
+                ContactNumber = dc.PhoneNumber,
+                LastDonationDate = dc.LastDonationDate,// Ensure PhoneNumber is available in the query
                 Available = dc.Available
             }).ToListAsync();
 
@@ -162,7 +167,57 @@ namespace BloodDonationBackend.Services
             return result;
         }
 
-        public async Task<BloodRequestReturnDTO> UpdateRequest(UpdateRequestDTO updateRequestDTO)
+        public async Task<BloodRequestReturnDTO> CencelRequest(CancleRequestDTO cancleRequestDTO)
+        {
+           var req= await _BloodRequestRepo.Get(cancleRequestDTO.requestid);
+            if (req == null) {
+                throw new Exception("Request  not found");
+            }
+            req.Status ="Cencelled";
+
+      
+
+            var result = await _BloodRequestRepo.Update(req);
+
+            var retu = new BloodRequestReturnDTO
+            {
+                IsUrgent = req.IsUrgent,
+                Status = req.Status,
+                District = req.District,
+                Quantity = req.Quantity,
+                RecipientId = req.RecipientId,
+                RequestDate = req.RequestDate,
+                RequestId = req.RequestId,
+                BloodType = req.BloodType,
+            };
+            return retu;
+        }
+           public async Task<BloodRequestReturnDTO> ApproveRequest(CancleRequestDTO cancleRequestDTO)
+        {
+           var req= await _BloodRequestRepo.Get(cancleRequestDTO.requestid);
+            if (req == null) {
+                throw new Exception("Request  not found");
+            }
+            req.Status ="Approved";
+
+      
+
+            var result = await _BloodRequestRepo.Update(req);
+
+            var retu = new BloodRequestReturnDTO
+            {
+                IsUrgent = req.IsUrgent,
+                Status = req.Status,
+                District = req.District,
+                Quantity = req.Quantity,
+                RecipientId = req.RecipientId,
+                RequestDate = req.RequestDate,
+                RequestId = req.RequestId,
+                BloodType = req.BloodType,
+            };
+            return retu;
+        }
+          public async Task<BloodRequestReturnDTO> UpdateRequest(UpdateRequestDTO updateRequestDTO)
         {
            var req= await _BloodRequestRepo.Get(updateRequestDTO.RequestId);
             if (req == null) {

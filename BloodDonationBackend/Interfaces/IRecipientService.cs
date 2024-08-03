@@ -11,5 +11,7 @@ namespace BloodDonationBackend.Interfaces
         public Task<IEnumerable<BloodRequestReturnDTO>> ViewRequest(int Id);
         public Task<Recipient> UpdateMedicalInfo(int userid,string medicalInfo);
         public Task<BloodRequestReturnDTO> UpdateRequest(UpdateRequestDTO updateRequestDTO);
+        public  Task<BloodRequestReturnDTO> CencelRequest(CancleRequestDTO cancleRequestDTO);
+        public Task<BloodRequestReturnDTO> ApproveRequest(CancleRequestDTO cancleRequestDTO);
     }
 }

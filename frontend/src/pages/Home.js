@@ -10,7 +10,7 @@ const Home = () => {
          SearchDonationCenterNearMe ,DonationCenter} = useContext(BloodDonationContext);
 
 
-
+  
     const [states, setStates] = useState([
         { name: 'Andhra Pradesh', districts: ['Anantapur', 'Chittoor', 'East Godavari', 'Guntur', 'Krishna', 'Kurnool', 'Prakasam', 'Srikakulam', 'Sri Potti Sriramulu Nellore', 'Visakhapatnam', 'Vizianagaram', 'West Godavari', 'YSR Kadapa'] },
         { name: 'Arunachal Pradesh', districts: ['Tawang', 'West Kameng', 'East Kameng', 'Papum Pare', 'Kurung Kumey', 'Kra Daadi', 'Lower Subansiri', 'Upper Subansiri', 'West Siang', 'East Siang', 'Siang', 'Upper Siang', 'Lower Siang', 'Lower Dibang Valley', 'Dibang Valley', 'Anjaw', 'Lohit', 'Namsai', 'Changlang', 'Tirap', 'Longding'] },
@@ -49,7 +49,8 @@ const Home = () => {
     const [districts, setDistricts] = useState([]);
     const [selectedDistrict, setSelectedDistrict] = useState('');
     const [bloodType, setBloodType] = useState('');
-
+    const [searching, setsearching] = useState(false);
+   
     useEffect(() => {
         if (selectedState) {
             const stateData = states.find(state => state.name === selectedState);
@@ -82,15 +83,24 @@ const Home = () => {
         console.log(`State: ${selectedState}, District: ${selectedDistrict}, Blood Type: ${bloodType}`);
         fetchdonors({ state: selectedState, district: selectedDistrict, bloodType: bloodType })
         SearchDonationCenterNearMe({ state: selectedState, district: selectedDistrict})
+        setsearching(true);
         console.log(donors);
 
     };
+
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+        const year = date.getFullYear();
+        return `${day}-${month}-${year}`;
+      };
 
     return (
         <>
             <Navbar />
             <section>
-                <div className='banner-corosol container'>
+                <div className='banner-corosol '>
                     <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -121,12 +131,12 @@ const Home = () => {
             </section>
 
             <section>
-                <div className='learn-about-donation container'>
-                    <h1>Learn About Donation</h1>
+                <div className='learn-about-donation mt-3 container'>
+                    <h1 className='text-center'>Learn About Donation</h1>
                     <div className='row'>
-                        <div className='col'>
-                            <h2>Learn About Donation</h2>
-                            <img src={require('../Images/donationFact.webp')} alt="Donation Facts" />
+                        <div className='col justify-content-center align-items-center'>
+                            {/* <h2>Learn About Donation</h2> */}
+                            <img className='img-fluid' src={require('../Images/donationFact.webp')} alt="Donation Facts" />
                             <p>After donating blood, the body works to replenish the blood loss. This stimulates the production of new blood cells and in turn, helps in maintaining good health.</p>
                         </div>
                         <div className='col'>
@@ -190,7 +200,7 @@ const Home = () => {
             </section>
 
             <section>
-                <div className='find-donor container'>
+                <div className='find-donor container mb-3'>
                     <form className="row g-3" onSubmit={handleSubmit}>
                         <div className="col-md-4">
                             <label htmlFor="inputState" className="form-label">State</label>
@@ -228,14 +238,14 @@ const Home = () => {
                         </div>
 
                         <div className="col-12">
-                            <button type="submit" className="btn btn-primary">Search Donors</button>
+                            <button type="submit" className="btn btn-primary">Search </button>
                         </div>
                     </form>
                 </div>
             </section>
 
-            <section>
-                <div className='container'>
+         {searching &&   <section>
+                <div className='container mb-3'>
                     <table class="table">
                         <thead>
                             <tr>
@@ -258,9 +268,9 @@ const Home = () => {
                         </tbody>
                     </table>
                 </div>
-            </section>
-            <section>
-            <div className='container'>
+            </section>}
+           {searching && <section>
+            <div className='container mb-3'>
                 <table className="table">
                     <thead>
                         <tr>
@@ -292,7 +302,7 @@ const Home = () => {
                     </tbody>
                 </table>
             </div>
-        </section>
+        </section>}
         </>
     );
 };

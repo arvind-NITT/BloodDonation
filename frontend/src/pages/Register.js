@@ -74,13 +74,19 @@ const Register = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  const isValidPhoneNumber = (phoneNumber) => {
+    return /^\d{10}$/.test(phoneNumber);
+  };
   const handleSubmit =async (e) => {
 
     try{
     e.preventDefault();
     if (!isValidAge(formData.dateOfBirth)) {
       alert("Age must be 18 or above. You are not allowed to proceed.");
+      return;
+    }
+    if (!isValidPhoneNumber(formData.contact)) {
+      alert("Phone number must be a 10-digit number.");
       return;
     }
     const response= await  fetch('https://localhost:7020/api/User/Register', {
@@ -149,7 +155,7 @@ const Register = () => {
     <div className="container w-75 d-flex p-5">
       <div className="LeftContainer" style={{ fontFamily: 'Playfair Display, serif', backgroundColor: 'rgb(250, 210, 157)' }}>
         <h2>Now</h2>
-        <h1 style={{ color: 'rgb(68, 59, 51)', fontWeight: 800, fontSize: '55px' }}>Find Your Life Partner</h1>
+        <h1 style={{ color: 'rgb(68, 59, 51)', fontWeight: 800, fontSize: '55px' }}>Find Your Blood Buddy</h1>
         <h2>Easy and fast</h2>
         <div className="login_couple_photo">
           <img src="./Images/login-couple.png" alt="" style={{ width: '230px' }} />

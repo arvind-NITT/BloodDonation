@@ -68,11 +68,16 @@ namespace BloodDonationBackend.Services
         public async Task<ScheduleAppointmentReturnDTO> UpdateAppointment(int id)
         {
             var app = await _AppointmentRepo.Get(id);
-            if (app != null)
-            {
-                app.Status = "Completed";
-                await _AppointmentRepo.Update(app);
+            var don = await _DonorRepo.Get(app.DonorId);
+            don.LastDonationDate = DateTime.Now;
+            await _DonorRepo.Update(don);
+            if (app == null) { 
+                throw new NotImplementedException();
             }
+          
+                app.Status = "Completed";
+             app =   await _AppointmentRepo.Update(app);
+            
             return new ScheduleAppointmentReturnDTO
             {
                 Status = app.Status,

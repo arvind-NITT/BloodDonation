@@ -23,10 +23,10 @@ namespace BloodDonationBackend.Controllers
 
         [Authorize]
         [HttpGet("ViewAppointment")]
-        [ProducesResponseType(typeof(List<ScheduleAppointmentReturnDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<ViewAppointmentReturnDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<ScheduleAppointmentReturnDTO>>> ViewAppointment()
+        public async Task<ActionResult<List<ViewAppointmentReturnDTO>>> ViewAppointment()
         {
             if (!ModelState.IsValid)
             {
@@ -144,6 +144,39 @@ namespace BloodDonationBackend.Controllers
 
                 int userId = int.Parse(userIdClaim.Value);
                 var reschedule = await _BloodBankservice.UpdateAppointment(cancleAppointmentDTO);
+                return Ok(reschedule);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new ErrorModel(404, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorModel(500, "An error occurred while updating the Appointment."));
+            }
+        }
+
+        [Authorize]
+        [HttpPut("UpdateInventory")]
+        [ProducesResponseType(typeof(ScheduleAppointmentReturnDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> UpdateInventorys([FromBody] UpdateInventory cancleAppointmentDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                int userId = int.Parse(userIdClaim.Value);
+                var reschedule = await _BloodBankservice.UpdateInventory(cancleAppointmentDTO);
                 return Ok(reschedule);
             }
             catch (KeyNotFoundException ex)

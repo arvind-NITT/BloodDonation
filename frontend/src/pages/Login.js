@@ -75,7 +75,7 @@ const Login = () => {
     <div className="container w-75 d-flex p-5">
       <div className="LeftContainer" style={{ fontFamily: 'Playfair Display, serif', backgroundColor: 'rgb(250, 210, 157)' }}>
         <h2>Now</h2>
-        <h1 style={{ color: 'rgb(68, 59, 51)', fontWeight: 800, fontSize: '55px' }}>Find Blood for You </h1>
+        <h1 style={{ color: 'rgb(68, 59, 51)', fontWeight: 800, fontSize: '55px' }}>Find your Blood buddy </h1>
         <h2>Easy and fast</h2>
         <div className="login_couple_photo">
           <img src="./Images/login-couple.png" alt="" style={{ width: '230px' }} />
@@ -86,7 +86,8 @@ const Login = () => {
         <div className="heading_login">
           <h7>Welcome </h7>
           <h2>Login to India's most used blood donation Website</h2>
-          <h7>New member? <Link to="/Register">Register</Link></h7>
+
+       <h7>New member? <Link to="/Register">Register</Link></h7>
         </div>
         <div className="col-md-6">
           <label htmlFor="contact" className="form-label">Contact Number</label>

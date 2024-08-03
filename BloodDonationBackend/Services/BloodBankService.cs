@@ -45,15 +45,34 @@ namespace BloodDonationBackend.Services
         public async Task<ScheduleAppointmentReturnDTO> UpdateAppointment(CancleAppointmentDTO cancleAppointmentDTO)
         {
             var app = await _AppointmentRepo.Get(cancleAppointmentDTO.Appointmentid);
+            if (app == null)
+            {
+                throw new Exception("Appointment not found");
+            }
             var don = await _DonorRepo.Get(app.DonorId);
+            if (don == null)
+            {
+                throw new Exception("Donor not found");
+            }
             var user = await _UserRepo.Get(don.UserId);
-            var Bi = await _context.BloodInventorys.Where(b=> b.CenterId == app.CenterId && b.BloodType == user.BloodType).ToListAsync();
-            if (Bi.Any()) {
+            if (user == null)
+            {
+                throw new Exception("User not found");
+            }
+
+            var Bi = await _context.BloodInventorys.Where(b => b.CenterId == app.CenterId && b.BloodType == user.BloodType).ToListAsync();
+            if (Bi == null)
+            {
+                throw new Exception("BloodInventory query failed");
+            }
+            if (Bi.Any())
+            {
                 var b1 = Bi.First();
-                b1.Quantity = b1.Quantity + 1;
+                b1.Quantity += 1;
                 await _BloodInventory.Update(b1);
             }
-            else {
+            else
+            {
                 var data = new BloodInventory
                 {
                     CenterId = app.CenterId,
@@ -63,27 +82,42 @@ namespace BloodDonationBackend.Services
                 await _BloodInventory.Add(data);
             }
 
-            return await _AppointmentService.UpdateAppointment(cancleAppointmentDTO.Appointmentid);
-        }
-
-        public async Task<IEnumerable<ScheduleAppointmentReturnDTO>> ViewAppointments(int userid)
-        {
-            var id = await _context.DonationCenters.FirstOrDefaultAsync(d => d.UserId == userid);
-            if (id == null)
+            var result = await _AppointmentService.UpdateAppointment(cancleAppointmentDTO.Appointmentid);
+            if (result == null)
             {
-                throw new Exception("Null not found");
+                throw new Exception("UpdateAppointment failed");
             }
-            var appointments = await Getappointmentsbyid(id.CenterId);
-            var appointmentDTOs = appointments.Select(a => new ScheduleAppointmentReturnDTO
-            {
-                AppointmentId = a.AppointmentId,
-                AppointmentDate = a.AppointmentDate,
-                Location = a.Location,
-                Status = a.Status
-            });
-
-            return appointmentDTOs;
+            return result;
         }
+
+
+        public async Task<IEnumerable<ViewAppointmentReturnDTO>> ViewAppointments(int userid)
+        {
+            var center = await _context.DonationCenters.FirstOrDefaultAsync(d => d.UserId == userid);
+            if (center == null)
+            {
+                throw new Exception("Donation center not found");
+            }
+
+            var appointments = await (from appointment in _context.Appointments
+                                      join donor in _context.Donors on appointment.DonorId equals donor.DonorId
+                                      join user in _context.Users on donor.UserId equals user.UserId
+                                      where appointment.CenterId == center.CenterId
+                                      orderby appointment.AppointmentDate
+                                      select new ViewAppointmentReturnDTO
+                                      {
+                                          AppointmentId = appointment.AppointmentId,
+                                          AppointmentDate = appointment.AppointmentDate,
+                                          Name = user.Name,
+                                          PhoneNumber = user.PhoneNumber,
+                                          BloodType = user.BloodType,
+                                          Location = appointment.Location,
+                                          Status = appointment.Status
+                                      }).ToListAsync();
+
+            return appointments;
+        }
+
         public async Task<IEnumerable<Appointment>> Getappointmentsbyid(int centerid)
         {
             var appointments = await _context.Appointments
@@ -102,6 +136,20 @@ namespace BloodDonationBackend.Services
             };
          
             return await _BloodInventoryService.CheckAvailability(checkAvailabilityDTO);
+
+        }
+
+        public async Task<ReturnInventoryDTO> UpdateInventory(UpdateInventory updateInventoryDTO)
+        {
+            var getinv = await _BloodInventory.Get(updateInventoryDTO.InventoryId);
+            var Upda = new UpdateInventoryDTO
+            {
+                InventoryId = updateInventoryDTO.InventoryId,
+                Quantity = updateInventoryDTO.Quantity,
+                BloodType = getinv.BloodType
+            };
+
+           return await _BloodInventoryService.UpdateInventory(Upda);
 
         }
     }

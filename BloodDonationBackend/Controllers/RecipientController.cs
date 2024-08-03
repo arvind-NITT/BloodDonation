@@ -115,6 +115,52 @@ namespace BloodDonationBackend.Controllers
    
 
         [Authorize]
+        [HttpPut("ApproveRequest")]
+        [ProducesResponseType(typeof(BloodRequestReturnDTO), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> ApproveRequest([FromBody] CancleRequestDTO cancleRequestDTO)
+        {
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                int userId = int.Parse(userIdClaim.Value);
+                var result = await _RecipientService.ApproveRequest(cancleRequestDTO);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+        } 
+        [Authorize]
+        [HttpPut("CencelRequest")]
+        [ProducesResponseType(typeof(BloodRequestReturnDTO), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> CencelRequest([FromBody] CancleRequestDTO cancleRequestDTO)
+        {
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                int userId = int.Parse(userIdClaim.Value);
+                var result = await _RecipientService.CencelRequest(cancleRequestDTO);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+        }
+        [Authorize]
         [HttpPut("UpdateRequest")]
         [ProducesResponseType(typeof(BloodRequestReturnDTO), 200)]
         [ProducesResponseType(404)]

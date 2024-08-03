@@ -20,18 +20,13 @@ const BloodDonationStates = ({ children }) => {
   const [AllRequests, setAllRequests] = useState([]);
   const [BloodSearch, setBloodSearch] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [BloodBankwantstoseeAppointments, setBloodBankwantstoseeAppointments] = useState(false);
+  const [DonorwantstoseeAppointments, setDonorwantstoseeAppointments] = useState(false);
   const BACKENDLINK = process.env.REACT_APP_BACKEND_LINK;
   const addDonor = (newDonor) => {
     setDonors([...donors, newDonor]);
   };
 
-  // const [setup_data,set_setup_data]= useState([]);
-  // const [setup_customer,set_setup_customer]= useState([]);
-  // const [setup_veges,set_setup_veges]= useState([]);
-  // const [setup_Price,set_setup_Price]= useState([]);
-  // const [total,settotal]= useState(0);
-  // const [customertotal,setcustomertotal]= useState(0);
-  // const [vegtotaltotal,setvegtotal]= useState(0);
  
    const fetchdonors= async(item)=>{
        const url= `${BACKENDLINK}/api/User/DonorSearch`;
@@ -72,6 +67,12 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setDonationCenter(result);  
       console.log(result);
    }
@@ -92,6 +93,12 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setRecipientDonationCenter(result);  
       console.log(result);
    }
@@ -112,6 +119,12 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setDonationCenter(result);  
       console.log(result);
    }
@@ -136,12 +149,16 @@ const BloodDonationStates = ({ children }) => {
   }
   const sixtyDaysInMilliseconds = 60 * 24 * 60 * 60 * 1000;
   for (let appointment of AllAppointments) {
+    if(appointment.status ==="Cancelled") {
+      continue;
+    }
     const existingAppointmentDate = new Date(appointment.appointmentDate);
     console.log(appointmentDate,existingAppointmentDate);
     const differenceInTime = Math.abs(appointmentDate - existingAppointmentDate);
      
     if (differenceInTime < sixtyDaysInMilliseconds) {
       console.error('The new appointment date must be at least 60 days apart from any existing appointment.');
+      alert('The new appointment date must be at least 60 days apart from any existing appointment.')
       return;
     }
   }
@@ -161,6 +178,13 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const newAppointment= await response.json();
+      if(!response.ok){
+        alert(newAppointment.message)
+    
+        console.log('Response:', newAppointment);
+        return ;
+       }
+       alert("Done");
       setAppointments(newAppointment);  
       setAllAppointments((prevAllAppointments) => [...prevAllAppointments, newAppointment]);
       console.log(newAppointment);
@@ -185,7 +209,14 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setRequests(result);  
+      ViewRequest();
       console.log(result);
    }
    const SearchForBlood= async(item)=>{
@@ -199,15 +230,76 @@ const BloodDonationStates = ({ children }) => {
         'Authorization': `Bearer ${token}`
        },
        body: JSON.stringify({
-        "bloodType": "A+",
-        "state": "Madhya Pradesh",
-        "district": "Mandsaur"
+        "bloodType": item.bloodType,
+        "state": item.state,
+        "district": item.district
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setBloodSearch(result);  
       console.log(result);
    }
+//------------------------------------------//
+
+const CancelmyRequest= async(item)=>{
+  const url= `${BACKENDLINK}/api/Recipient/CencelRequest`;
+ const response= await fetch(url,{
+  method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+  headers:{
+   'Content-Type': 'application/json',
+   'Accept': 'application/json',
+   'Access-Control-Allow-Origin': "*",
+   'Authorization': `Bearer ${token}`
+  },
+  body: JSON.stringify({
+    requestid:item
+  })
+ })
+ const result= await response.json();
+ if(!response.ok){
+  alert(result.message)
+
+  console.log('Response:', result);
+  return ;
+ }
+ // setBloodSearch(result);  
+ ViewRequest();
+}
+const FullfilledmyRequest= async(item)=>{
+  const url= `${BACKENDLINK}/api/Recipient/ApproveRequest`;
+ const response= await fetch(url,{
+  method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+  headers:{
+   'Content-Type': 'application/json',
+   'Accept': 'application/json',
+   'Access-Control-Allow-Origin': "*",
+   'Authorization': `Bearer ${token}`
+  },
+  body: JSON.stringify({
+    requestid:item
+  })
+ })
+ const result= await response.json();
+ if(!response.ok){
+  alert(result.message)
+
+  console.log('Response:', result);
+  return ;
+ }
+ // setBloodSearch(result);  
+ ViewRequest();
+}
+
+//-------------------------------------------//
+
+
+
    const addDonationCenter= async(item)=>{
        const url= `${BACKENDLINK}/api/Admin/addDonationCenter`;
       const response= await fetch(url,{
@@ -229,6 +321,12 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       // setBloodSearch(result);  
    }
    const donorViewRequest= async()=>{
@@ -243,6 +341,12 @@ const BloodDonationStates = ({ children }) => {
        },
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setRequestInmyDistrict(result);  
       console.log(result);
    }
@@ -258,6 +362,12 @@ const BloodDonationStates = ({ children }) => {
        },
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setAllAppointments(result);  
       
       console.log(result);
@@ -274,6 +384,12 @@ const BloodDonationStates = ({ children }) => {
        },
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setAllRequests(result);  
       console.log(result);
    }
@@ -292,6 +408,12 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       // setBloodSearch(result);  
       donorViewAppointment();
    }
@@ -317,7 +439,7 @@ const BloodDonationStates = ({ children }) => {
     const sixtyDaysInMilliseconds = 60 * 24 * 60 * 60 * 1000;
     for (let appointment of AllAppointments) {
       console.log(appointment.appointmentId, item.centerid);
-      if(appointment.appointmentId === item.centerid){
+      if(appointment.appointmentId === item.centerid || appointment.status ==="Cancelled"){
         console.log(appointment.appointmentId, item.centerid);
         continue;
       }
@@ -348,6 +470,12 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       // setBloodSearch(result);  
       donorViewAppointment();
    }
@@ -375,6 +503,12 @@ const BloodDonationStates = ({ children }) => {
        })
       })
       const result= await response.json();
+      if(!response.ok){
+        alert(result.message)
+    
+        console.log('Response:', result);
+        return ;
+       }
       setBloodSearch(result);  
    }
    const UpdateInfoForRecipient= async(item)=>{
@@ -409,11 +543,18 @@ const BloodDonationStates = ({ children }) => {
     },
    })
    const result= await response.json();
+   if(!response.ok){
+    alert(result.message)
+
+    console.log('Response:', result);
+    return ;
+   }
    setAllBloodbankAppointments(result);  
    
    console.log(result);
 }
 const AppointmentUpdateByBloodBank= async(item)=>{
+  console.log("Updating");
   const url= `${BACKENDLINK}/api/BloodBank/UpdateAppointment`;
  const response= await fetch(url,{
   method: 'PUT', // *GET, POST, PUT, DELETE, etc.
@@ -428,8 +569,15 @@ const AppointmentUpdateByBloodBank= async(item)=>{
   })
  })
  const result= await response.json();
+ if(!response.ok){
+  alert(result.message)
+
+  console.log('Response:', result);
+  return ;
+ }
  // setBloodSearch(result);  
  BloodbankAllAppointment();
+ AvailabilityCheck();
 }
 const AppointmentCencelledByBloodBank= async(item)=>{
   const url= `${BACKENDLINK}/api/BloodBank/CancelAppointment`;
@@ -446,6 +594,12 @@ const AppointmentCencelledByBloodBank= async(item)=>{
   })
  })
  const result= await response.json();
+ if(!response.ok){
+  alert(result.message)
+
+  console.log('Response:', result);
+  return ;
+ }
  // setBloodSearch(result);  
  BloodbankAllAppointment();
 }
@@ -504,6 +658,12 @@ const RescheduleAppointmentByBloodBank= async(item)=>{
     })
     const result= await response.json();
     // setBloodSearch(result);  
+    if(!response.ok){
+      alert(result.message)
+  
+      console.log('Response:', result);
+      return ;
+     }
     BloodbankAllAppointment();
  }
 
@@ -519,10 +679,38 @@ const RescheduleAppointmentByBloodBank= async(item)=>{
    },
   })
   const result= await response.json();
+  if(!response.ok){
+    alert(result.message)
+
+    console.log('Response:', result);
+    return ;
+   }
   setAvailableBlood(result);  
   
   console.log(result);
  }
+ const UpdateInventory= async(item)=>{
+  const url= `${BACKENDLINK}/api/BloodBank/UpdateInventory`;
+ const response= await fetch(url,{
+  method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+  headers:{
+   'Content-Type': 'application/json',
+   'Accept': 'application/json',
+   'Access-Control-Allow-Origin': "*",
+   'Authorization': `Bearer ${token}`
+  },
+  body: JSON.stringify({
+
+   InventoryId:item.Inventoryid,
+   Quantity:item.Unit
+  })
+ })
+ const result= await response.json();
+//  setBloodSearch(result);  
+AvailabilityCheck();
+ console.log(result);
+}
+
 
 
   return (
@@ -532,7 +720,9 @@ const RescheduleAppointmentByBloodBank= async(item)=>{
     ,donorViewAppointment,UpdateInfoForDonor,AllAppointments,RequestInmyDistrict,CancelmyAppointment,ReschedulemyAppointment,
     AllBloodbankAppointments,AppointmentCencelledByBloodBank,
     AppointmentUpdateByBloodBank,BloodbankAllAppointment,RescheduleAppointmentByBloodBank,AvailabilityCheck,AvailableBlood,
-    SearchDonationCenterNearMe,SearchDonationCenterNearMeForRecipient,RecipientDonationCenter,setRole,Role}}>
+    SearchDonationCenterNearMe,SearchDonationCenterNearMeForRecipient,RecipientDonationCenter,
+    setRole,Role,CancelmyRequest,FullfilledmyRequest,UpdateInventory,setBloodBankwantstoseeAppointments,BloodBankwantstoseeAppointments,
+    DonorwantstoseeAppointments,setDonorwantstoseeAppointments,BloodSearch}}>
       {children}
     </BloodDonationContext.Provider>
   );

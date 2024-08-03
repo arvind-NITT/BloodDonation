@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Recipient from './pages/Recipient';
 import Donor from './pages/Donor';
 import DonationCenter from './pages/DonationCenter';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/BloodBank" element={<DonationCenter />} />
             {/* Add more routes as needed */}
           </Routes>
+       
         </div>
       </Router>
     </BloodDonationStates>

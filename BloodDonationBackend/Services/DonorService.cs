@@ -168,21 +168,28 @@ namespace BloodDonationBackend.Services
 
         public async Task<IEnumerable<BloodRequestReturnDTO>> RequestInMyDistrict(int userid)
         {
-              var user = await _UserRepo.Get(userid);
-            var requests = await _context.BloodRequests.Where(a => a.State == user.state && a.District == user.District).ToListAsync();
-               
-            var result = requests.Select(request => new BloodRequestReturnDTO
-            {
-                RequestId = request.RequestId,
-                BloodType = request.BloodType,
-                Quantity = request.Quantity,
-                State = request.State,
-                District = request.District,
-                RequestDate = request.RequestDate,
-                IsUrgent = request.IsUrgent,
-                Status = request.Status
-            }).ToList();
-            return result;
+            var user1 = await _UserRepo.Get(userid);
+            var requests = await (from request in _context.BloodRequests
+                                  join recipient in _context.Recipients on request.RecipientId equals recipient.RecipientId
+                                  join user in _context.Users on recipient.UserId equals user.UserId
+                                  where request.State == user1.state && request.District == user1.District
+                                  select new BloodRequestReturnDTO
+                                  {
+                                      RequestId = request.RequestId,
+                                      RecipientId = recipient.RecipientId,
+                                      Name = user.Name,
+                                      Contact = user.PhoneNumber,
+                                      BloodType = request.BloodType,
+                                      Quantity = request.Quantity,
+                                      State = request.State,
+                                      District = request.District,
+                                      RequestDate = request.RequestDate,
+                                      IsUrgent = request.IsUrgent,
+                                      Status = request.Status
+                                  }).ToListAsync();
+
+            return requests;
+
         }
 
         public async Task<ScheduleAppointmentReturnDTO> ReScheduleAppointment(ScheduleAppointmentDTO scheduleAppointmentDTO)
