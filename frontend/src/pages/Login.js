@@ -4,10 +4,11 @@ import BloodDonationContext from '../context/Contexts';
 import { redirect } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import '../components/styles.css';
 
 const Login = () => {
   const {  usertype,setRole } = useContext(BloodDonationContext);
-
+  const BACKENDLINK = process.env.REACT_APP_BACKEND_LINK;
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
   
@@ -25,7 +26,7 @@ const Login = () => {
     try{
     e.preventDefault();
 
-    const response= await  fetch('https://localhost:7020/api/User/Login', {
+    const response= await  fetch(`${BACKENDLINK}/api/User/Login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -77,10 +78,8 @@ const Login = () => {
         <h2>Now</h2>
         <h1 style={{ color: 'rgb(68, 59, 51)', fontWeight: 800, fontSize: '55px' }}>Find your Blood buddy </h1>
         <h2>Easy and fast</h2>
-        <div className="login_couple_photo">
-          <img src="./Images/login-couple.png" alt="" style={{ width: '230px' }} />
-        </div>
-        <div className="logo-bg"></div>
+       
+       
       </div>
       <form className="row w-75 container container-md bg-white g-3 p-5 rounded" id="RegisterForm" onSubmit={handleSubmit}>
         <div className="heading_login">

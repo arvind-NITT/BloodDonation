@@ -6,4 +6,5 @@ select * from Recipients;
 select * from Appointments;
 select * from Bloodrequests;
 select * from BloodInventorys;
+select * from DonationCenters;
 

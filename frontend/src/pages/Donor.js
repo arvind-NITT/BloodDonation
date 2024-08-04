@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import BloodDonationContext from '../context/Contexts';
 import Footer from '../components/Footer';
+import '../components/styles.css'
 const formatDate = (dateString) => {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, '0');
@@ -14,12 +15,13 @@ const Donor = () => {
 
     const { SearchDonationCenter, DonationCenter, ScheduleAppointmentforme, donorViewRequest, donorViewAppointment,
         RequestInmyDistrict, AllAppointments,CancelmyAppointment,ReschedulemyAppointment,
-          DonorwantstoseeAppointments,setDonorwantstoseeAppointments
+          DonorwantstoseeAppointments,setDonorwantstoseeAppointments,GetInfoForDonor
     } = useContext(BloodDonationContext);
 
     useEffect(() => {
         donorViewAppointment();
         donorViewRequest();
+        GetInfoForDonor();
     }, []);
     const [states, setStates] = useState([
         { name: 'Andhra Pradesh', districts: ['Anantapur', 'Chittoor', 'East Godavari', 'Guntur', 'Krishna', 'Kurnool', 'Prakasam', 'Srikakulam', 'Sri Potti Sriramulu Nellore', 'Visakhapatnam', 'Vizianagaram', 'West Godavari', 'YSR Kadapa'] },
@@ -268,8 +270,10 @@ const Donor = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {RequestInmyDistrict && RequestInmyDistrict.map((item, index) => (
-                                          item.status==="Pending" &&  <tr>
+                                        {RequestInmyDistrict && RequestInmyDistrict
+                                        .filter(item =>  item.status==="Pending")
+                                        .map((item, index) => (
+                                          <tr>
                                                 <th id={index} key={index} scope="row">{index + 1}</th>
                                                 <td>{item.name}</td>
                                                 <td>{item.contact}</td>
@@ -303,8 +307,10 @@ const Donor = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {AllAppointments && AllAppointments.map((item, index) => (
-                                           item.status==="Scheduled" && <tr>
+                                        {AllAppointments && AllAppointments
+                                        .filter(item => item.status==="Scheduled")
+                                        .map((item, index) => (
+                                            <tr>
                                                 <th id={index} key={index} scope="row">{index + 1}</th>
                                                 <td>{formatDate(item.appointmentDate)}</td>
                                                 <td>{item.location}</td>

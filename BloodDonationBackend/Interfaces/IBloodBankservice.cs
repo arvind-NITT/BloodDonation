@@ -12,6 +12,7 @@ namespace BloodDonationBackend.Interfaces
         public Task<ScheduleAppointmentReturnDTO> UpdateAppointment(CancleAppointmentDTO cancleAppointmentDTO);
 
         public Task<ReturnInventoryDTO> UpdateInventory(UpdateInventory updateInventoryDTO);
+        public Task<ReturnInventoryDTO> AddInventory(AddInventoryDTO updateInventoryDTO);
 
 
     }

@@ -157,8 +157,41 @@ namespace BloodDonationBackend.Controllers
         }
 
         [Authorize]
+        [HttpPost("AddInventory")]
+        [ProducesResponseType(typeof(ReturnInventoryDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> AddInventory([FromBody] AddInventoryDTO cancleAppointmentDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                int userId = int.Parse(userIdClaim.Value);
+                cancleAppointmentDTO.CenterId = userId;
+                var reschedule = await _BloodBankservice.AddInventory(cancleAppointmentDTO);
+                return Ok(reschedule);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new ErrorModel(404, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorModel(500, "An error occurred while updating the Appointment."));
+            }
+        }
+         [Authorize]
         [HttpPut("UpdateInventory")]
-        [ProducesResponseType(typeof(ScheduleAppointmentReturnDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ReturnInventoryDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> UpdateInventorys([FromBody] UpdateInventory cancleAppointmentDTO)
         {

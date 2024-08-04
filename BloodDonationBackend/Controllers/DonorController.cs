@@ -163,6 +163,38 @@ namespace BloodDonationBackend.Controllers
         }
 
         [Authorize]
+        [HttpGet("GetInfo")]
+        [ProducesResponseType(typeof(DonorUpdateReturnDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetInfo()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                int userId = int.Parse(userIdClaim.Value);
+                var updatedDonor = await _DonorService.GetInfo(userId);
+                return Ok(updatedDonor);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new ErrorModel(404, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorModel(500, "An error occurred while updating the donor."));
+            }
+        }
+        [Authorize]
         [HttpPut("UpdateInfo")]
         [ProducesResponseType(typeof(DonorUpdateReturnDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
@@ -194,7 +226,7 @@ namespace BloodDonationBackend.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new ErrorModel(500, "An error occurred while updating the donor."));
             }
         }
-         [Authorize]
+        [Authorize]
         [HttpPut("ReScheduleAppointment")]
         [ProducesResponseType(typeof(ScheduleAppointmentReturnDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
@@ -226,7 +258,7 @@ namespace BloodDonationBackend.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new ErrorModel(500, "An error occurred while updating the Appointment."));
             }
         }
-       [Authorize]
+        [Authorize]
         [HttpPut("CancelAppointment")]
         [ProducesResponseType(typeof(ScheduleAppointmentReturnDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]

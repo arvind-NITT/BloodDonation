@@ -62,9 +62,12 @@ const Navbar = () => {
           {
             localStorage.getItem('Role') && localStorage.getItem('Role') ==="Donor" && <Link className="nav-link active" to=""  onClick={setDonorwantstoseeAppointment}>All Appointments</Link>
           }
+          {
+            localStorage.getItem('Role') && localStorage.getItem('Role') ==="Donor" && <Link className="nav-link active" to="/Profile" >My Profile</Link>
+          }
  { token && <form className="d-flex">
             {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> */}
-            <Link className="nav-link active" to="" >{localStorage.getItem('Role')}</Link>
+            <Link className="nav-link active" to={`/${localStorage.getItem('Role')}`} >{localStorage.getItem('Role')}</Link>
             <Link className="nav-link active" to="/login" onClick={() => logout()}>Logout</Link>
 
           </form>}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import BloodDonationContext from '../context/Contexts';
 import '../components/homestyles.css';
+import Footer from '../components/Footer';
 
 const Home = () => {
     const { fetchdonors, SearchDonationCenter, UpdateInfoForRecipient,
@@ -136,7 +137,7 @@ const Home = () => {
                     <div className='row'>
                         <div className='col justify-content-center align-items-center'>
                             {/* <h2>Learn About Donation</h2> */}
-                            <img className='img-fluid' src={require('../Images/donationFact.webp')} alt="Donation Facts" />
+                            <img className='img-fluid' src={require('../Images/donationFact.jpg')} alt="Donation Facts" />
                             <p>After donating blood, the body works to replenish the blood loss. This stimulates the production of new blood cells and in turn, helps in maintaining good health.</p>
                         </div>
                         <div className='col'>
@@ -246,6 +247,7 @@ const Home = () => {
 
          {searching &&   <section>
                 <div className='container mb-3'>
+                <h2>Donor's</h2>
                     <table class="table">
                         <thead>
                             <tr>
@@ -271,6 +273,7 @@ const Home = () => {
             </section>}
            {searching && <section>
             <div className='container mb-3'>
+            <h2>Donation Center's</h2>
                 <table className="table">
                     <thead>
                         <tr>
@@ -303,6 +306,7 @@ const Home = () => {
                 </table>
             </div>
         </section>}
+        <Footer/>
         </>
     );
 };

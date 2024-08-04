@@ -145,10 +145,29 @@ const Recipient = () => {
                             <div class="modal-body">
 
                                 <form class="row g-3" onSubmit={handleRequestSubmit}>
-                                    <div className="col-md-6">
+                                    {/* <div className="col-md-6">
                                         <label htmlFor="bloodType" className="form-label">Blood Type</label>
                                         <input type="text" className="form-control" id="bloodType" name="bloodType" onChange={handleChange} />
-                                    </div>
+                                    </div> */}
+                                        <div className="col-md-4">
+                                    <label htmlFor="inputBloodType" className="form-label">Blood Type</label>
+                                    <select
+                                        id="bloodType" 
+                                        name="bloodType"
+                                        className="form-select"
+                                        onChange={handleChange}
+                                    >
+                                        <option value="" disabled>Choose...</option>
+                                        <option value="A+">A+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="B+">B+</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="O-">O-</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                </div>
                                     <div className="col-md-6">
                                         <label htmlFor="state" className="form-label">State:</label>
                                         <select id="state" name="state" className="form-select" value={RequestData.state} onChange={handlerequestStateChange}>
@@ -218,8 +237,10 @@ const Recipient = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {AllRequests && AllRequests.map((item, index) => (
-                               item.status==="Pending" &&  <tr>
+                            {AllRequests && AllRequests
+                             .filter(item => item.status === "Pending")
+                            .map((item, index) => (
+                                <tr>
                                     <th id={index} key={index} scope="row">{index + 1}</th>
                                     <td>{item.bloodType}</td>
                                     <td>{item.state}</td>

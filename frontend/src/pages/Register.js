@@ -5,6 +5,7 @@ import BloodDonationContext from '../context/Contexts';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 const Register = () => {
+  const BACKENDLINK = process.env.REACT_APP_BACKEND_LINK;
   const {usertype,setRole } = useContext(BloodDonationContext);
 
   useEffect(() => {
@@ -89,7 +90,7 @@ const Register = () => {
       alert("Phone number must be a 10-digit number.");
       return;
     }
-    const response= await  fetch('https://localhost:7020/api/User/Register', {
+    const response= await  fetch(`${BACKENDLINK}/api/User/Register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -126,14 +127,16 @@ const Register = () => {
       console.log('Response:', data);
       localStorage.setItem('token', data.token);
       localStorage.setItem('UserID', data.UserID);
+      localStorage.setItem('Role', data.role);
+      
       setRole(data.role);
        alert("Registration done");
        if(data.role === "Recipient")
         navigate('/Recipient');
         else if(data.role === "Donor")
         navigate('/Donor');
-        else if(data.role === "Admin")
-        navigate('/Admin');
+        else if(data.role === "Bloodbank")
+        navigate('/BloodBank');
       }catch(error)
     {  console.error('Error:', error);
       alert(error);}
@@ -157,10 +160,8 @@ const Register = () => {
         <h2>Now</h2>
         <h1 style={{ color: 'rgb(68, 59, 51)', fontWeight: 800, fontSize: '55px' }}>Find Your Blood Buddy</h1>
         <h2>Easy and fast</h2>
-        <div className="login_couple_photo">
-          <img src="./Images/login-couple.png" alt="" style={{ width: '230px' }} />
-        </div>
-        <div className="logo-bg"></div>
+       
+       
       </div>
       <form className="row w-75 container container-md bg-white g-3 p-5 rounded" id="RegisterForm" onSubmit={handleSubmit}>
         <div className="heading_login">
@@ -213,10 +214,30 @@ const Register = () => {
           <label htmlFor="zip" className="form-label">Zip</label>
           <input type="text" className="form-control" id="zip" name="zip" onChange={handleChange} />
         </div>
-        <div className="col-md-6">
+        {/* <div className="col-md-6">
           <label htmlFor="bloodType" className="form-label">Blood Type</label>
           <input type="text" className="form-control" id="bloodType" name="bloodType" onChange={handleChange} />
-        </div>
+        </div> */}
+         <div className="col-md-4">
+                                    <label htmlFor="inputBloodType" className="form-label">Blood Type</label>
+                                    <select
+                                       id="bloodType" 
+                                       name="bloodType"
+                                        className="form-select"
+                                       
+                                        onChange={handleChange}
+                                    >
+                                        <option value="" disabled>Choose...</option>
+                                        <option value="A+">A+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="B+">B+</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="O-">O-</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                </div>
         <div className="col-md-6">
           <label htmlFor="gender" className="form-label">Gender</label>
           <input type="text" className="form-control" id="gender" name="gender" onChange={handleChange} />

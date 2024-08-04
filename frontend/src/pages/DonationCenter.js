@@ -9,17 +9,48 @@ const formatDate = (dateString) => {
     const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
     const year = date.getFullYear();
     return `${day}-${month}-${year}`;
-  };
+};
 const DonationCenter = () => {
 
     const { CancelmyAppointment, ReschedulemyAppointment, BloodbankAllAppointment,
-         AllBloodbankAppointments, AppointmentCencelledByBloodBank
-        , AppointmentUpdateByBloodBank ,RescheduleAppointmentByBloodBank,AvailabilityCheck,
-        AvailableBlood,UpdateInventory,BloodBankwantstoseeAppointments} = useContext(BloodDonationContext);
-        const [Unit, setUnit] = useState('');
-        const [Inventoryid, setInventoryid] = useState('');
-        const [reappointmentdate, setreappointmentdate] = useState('');
-        const [recenterid, setrecenterid] = useState('');
+        AllBloodbankAppointments, AppointmentCencelledByBloodBank
+        , AppointmentUpdateByBloodBank, RescheduleAppointmentByBloodBank, AvailabilityCheck,
+        AvailableBlood, UpdateInventory,
+         BloodBankwantstoseeAppointments,AddNewInventory } = useContext(BloodDonationContext);
+    const [Unit, setUnit] = useState('');
+    const [Inventoryid, setInventoryid] = useState('');
+    const [reappointmentdate, setreappointmentdate] = useState('');
+    const [recenterid, setrecenterid] = useState('');
+
+
+    const [formState, setFormState] = useState({
+        bloodType: '',
+        unit: '',
+        
+    });
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    };
+
+    const handleSaveChanges = () => {
+        // Your logic to handle the form submission
+        console.log('Form State:', formState);
+
+        if (AvailableBlood.length > 0) {
+            const isBloodTypePresent = AvailableBlood.some(element => element.bloodType === formState.bloodType);
+            if (isBloodTypePresent) {
+                alert("Blood Type Already present");
+                return;  // Exit the function
+            }
+        }
+        AddNewInventory(formState);
+        // Add your fetch/axios request here to save the data
+    };
 
     useEffect(() => {
         BloodbankAllAppointment();
@@ -33,7 +64,7 @@ const DonationCenter = () => {
         setreappointmentdate(e.target.value);
         console.log(e.target.value);
     };
-    const ReschedulemyAppointment1 =()=>{
+    const ReschedulemyAppointment1 = () => {
         console.log(`date: ${reappointmentdate},centerid: ${recenterid}`);
         RescheduleAppointmentByBloodBank({ centerid: recenterid, date: reappointmentdate });
     }
@@ -41,15 +72,15 @@ const DonationCenter = () => {
         e.preventDefault();
         // Handle form submission logic here
         console.log(`Unit: ${Unit}, Inventoryid: ${Inventoryid}`);
-        UpdateInventory({Unit,Inventoryid})
+        UpdateInventory({ Unit, Inventoryid })
     };
 
 
     return (
         <>
-             <Navbar/>
+            <Navbar />
             <section>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -89,6 +120,53 @@ const DonationCenter = () => {
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="exampleModalLabel">Add Inventory</h5>
+                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div className="modal-body">
+                                <div className="col-md-4">
+                                    <label htmlFor="inputBloodType" className="form-label">Blood Type</label>
+                                    <select
+                                        id="inputBloodType"
+                                        className="form-select"
+                                        name="bloodType"
+                                        value={formState.bloodType}
+                                        onChange={handleChange}
+                                    >
+                                        <option value="" disabled>Choose...</option>
+                                        <option value="A+">A+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="B+">B+</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="O-">O-</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="unit" className="form-label">Unit</label>
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        id="unit"
+                                        name="unit"
+                                        value={formState.unit}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" className="btn btn-primary" onClick={handleSaveChanges}>Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div className='container centerAppointments'>
                     <div className='heading-option'>
@@ -113,9 +191,10 @@ const DonationCenter = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {AllBloodbankAppointments.length >0  && AllBloodbankAppointments.map((item, index) => (
-
-                                      item.status==="Scheduled" &&  <tr>
+                                    {AllBloodbankAppointments.length > 0 && AllBloodbankAppointments
+                                    .filter(item => item.status === "Scheduled")
+                                    .map((item, index) => (
+                                          <tr>
                                             <th id={index} key={index} scope="row">{index + 1}</th>
                                             <td>{item.name}</td>
                                             <td>{item.phoneNumber}</td>
@@ -141,43 +220,52 @@ const DonationCenter = () => {
 
             <section>
                 <div className='container  inventory'>
-                <div className='col'>
-                            <h2>Available Blood Type</h2>
-                            <div className="table-responsive">
-                                <table className="table table-bordered table-hover">
-                                    <thead className="thead-dark">
-                                        <tr>
-                                            <th>S. No</th>
-                                            <th>Blood Type</th>
-                                            <th>Unit</th>
-                                            <th>Update</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                            AvailableBlood.length > 0  && AvailableBlood.map((item,index)=>(
-                                                <tr key={index}>
-                                            <td>{index+1}</td>
-                                            <td>{item.bloodType}</td>
-                                            <td>{item.quantity}</td>
-                                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" onClick={() => setInventoryid(item.inventoryId)} data-bs-target="#exampleModal">
+                    <div className='col'>
+                        <h2>Available Blood Type</h2>
+                        <div className="table-responsive">
+                            <table className="table table-bordered table-hover">
+                                <thead className="thead-dark">
+                                    <tr>
+                                        <th>S. No</th>
+                                        <th>Blood Type</th>
+                                        <th>Unit</th>
+                                        <th>Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        AvailableBlood.length > 0 && AvailableBlood.map((item, index) => (
+                                            <tr key={index}>
+                                                <td>{index + 1}</td>
+                                                <td>{item.bloodType}</td>
+                                                <td>{item.quantity}</td>
+                                                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" onClick={() => setInventoryid(item.inventoryId)} data-bs-target="#exampleModal">
                                                     Update
                                                 </button></td>
-                                            {/* <td>{item.status}</td> */}
-                                        </tr>
-                                            ))
-                                        }
-                     
-                                    </tbody>
-                                </table>
-                            </div>
+                                                {/* <td>{item.status}</td> */}
+                                            </tr>
+
+                                        ))
+                                    }
+                                    <tr >
+                                    <div class="d-grid ">  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" >
+                                            Add Inventory
+                                        </button>
+</div>
+                                    
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
                         </div>
+                    </div>
                 </div>
             </section>
 
 
-        {  BloodBankwantstoseeAppointments==true &&  <section>
-            <div className='container centerAppointments'>
+            {BloodBankwantstoseeAppointments == true && <section>
+                <div className='container centerAppointments'>
                     <div className='heading-option'>
                         {/* <button type="button" class="btn btn-outline-secondary" onClick={changedivvisibilty} >New Requests</button>
                             <button type="button" class="btn btn-outline-success" onClick={changedivvisibilty}>Your Appointments</button> */}
@@ -197,14 +285,14 @@ const DonationCenter = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {AllBloodbankAppointments.length >0  && AllBloodbankAppointments.map((item, index) => (
+                                    {AllBloodbankAppointments.length > 0 && AllBloodbankAppointments.map((item, index) => (
 
                                         <tr>
                                             <th id={index} key={index} scope="row">{index + 1}</th>
                                             <td>{formatDate(item.appointmentDate)}</td>
                                             <td>{item.location}</td>
                                             <td>{item.status}</td>
-                                             </tr>
+                                        </tr>
                                     ))}
                                 </tbody>
                             </table>
@@ -213,9 +301,9 @@ const DonationCenter = () => {
                     </div>
                 </div>
             </section>
-}
+            }
 
-  <Footer/>
+            <Footer />
         </>
     );
 

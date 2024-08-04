@@ -152,5 +152,21 @@ namespace BloodDonationBackend.Services
            return await _BloodInventoryService.UpdateInventory(Upda);
 
         }
+        public async Task<ReturnInventoryDTO> AddInventory(AddInventoryDTO updateInventoryDTO)
+        {
+            var userid = updateInventoryDTO.CenterId;
+
+            // Find the donation center by userId (centerId in this case)
+            var donationCenter = await _context.DonationCenters
+                                               .FirstOrDefaultAsync(dc => dc.UserId == userid);
+
+            if (donationCenter == null)
+            {
+                // Handle the case where the donation center is not found
+                throw new KeyNotFoundException("Donation center not found.");
+            }
+            updateInventoryDTO.CenterId = donationCenter.CenterId;
+            return await _BloodInventoryService.AddInventory(updateInventoryDTO);
+        }
     }
 }

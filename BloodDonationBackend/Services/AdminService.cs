@@ -22,7 +22,6 @@ namespace BloodDonationBackend.Services
             _DonationCenterRepo = DonationCenterRepo;
             _BloodInventoryRepo = BloodInventoryRepo;
             _UserService= UserService;
-
         }
         public Task<ReturnInventoryDTO> AddBloodInventory(UpdateInventoryDTO updateInventoryDTO)
         {

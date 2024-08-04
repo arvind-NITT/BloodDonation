@@ -7,6 +7,7 @@ using System.Text;
 using BloodDonationBackend.Contexts;
 using Microsoft.EntityFrameworkCore;
 using BloodDonationBackend.Exceptions;
+using BloodDonationBackend.Repositories;
 
 namespace BloodDonationBackend.Services
 {
@@ -16,11 +17,14 @@ namespace BloodDonationBackend.Services
         private readonly IRepository<int, UserDetail> _UserDetailRepo;
         private readonly IRepository<int, User> _UserRepo;
         private readonly IRepository<int, Donor> _DonorRepo;
+        private readonly IRepository<int, DonationCenter> _DonationCenterRepo;
         private readonly IRepository<int, Recipient> _RecipientRepo;
         //private readonly IRepository<int, Transaction> _TransactionRepo;
         private readonly ITokenService _tokenService;
 
-        public UserService(BloodDonationContext context, IRepository<int, UserDetail> UserDetailRepo, IRepository<int, User> UserRepo, IRepository<int, Donor> DonorRepo, IRepository<int, Recipient> RecipientRepo, ITokenService tokenService)
+        public UserService(BloodDonationContext context, IRepository<int, UserDetail> UserDetailRepo,
+            IRepository<int, User> UserRepo, IRepository<int, Donor> DonorRepo,
+            IRepository<int, Recipient> RecipientRepo, ITokenService tokenService, IRepository<int, DonationCenter> donationCenterRepo)
         {
             _context = context;
             _UserDetailRepo = UserDetailRepo;
@@ -28,7 +32,7 @@ namespace BloodDonationBackend.Services
             _tokenService = tokenService;
             _DonorRepo = DonorRepo;
             _RecipientRepo = RecipientRepo;
-         
+            _DonationCenterRepo = donationCenterRepo;
         }
         public async Task<LoginReturnDTO> Login(UserLoginDTO loginDTO)
         {
@@ -137,6 +141,34 @@ namespace BloodDonationBackend.Services
                         MedicalCondition = UserDTO.MedicalCondition // Set medical condition from DTO
                     };
                     await _RecipientRepo.Add(recipient);
+                } else if (UserDTO.Role == Role.Bloodbank)
+                {
+                    var data = new DonationCenter
+                    {
+                        UserId = user.UserId,
+                        Name = UserDTO.Name,
+                        state = UserDTO.state,
+                        District = UserDTO.District,
+                        Pincode = UserDTO.Pincode,
+                        Address = UserDTO.Address,
+                        ContactInfo = UserDTO.PhoneNumber,
+                        OperatingHours =" 9 - 7",
+                    };
+
+                    var addedDonationCenter = await _DonationCenterRepo.Add(data);
+                    //var resultDTO = new DonationCenterDTO
+                    //{
+                    //    UserId = addedDonationCenter.UserId,
+                    //    Name = addedDonationCenter.Name,
+                    //    state = addedDonationCenter.state,
+                    //    District = addedDonationCenter.District,
+                    //    Pincode = addedDonationCenter.Pincode,
+                    //    Address = addedDonationCenter.Address,
+                    //    ContactInfo = addedDonationCenter.ContactInfo,
+                    //    OperatingHours = addedDonationCenter.OperatingHours
+                    //};
+
+                    
                 }
                 UserDetail.UserId = user.UserId;
                 UserDetail = await _UserDetailRepo.Add(UserDetail);

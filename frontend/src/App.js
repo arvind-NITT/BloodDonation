@@ -9,6 +9,7 @@ import Recipient from './pages/Recipient';
 import Donor from './pages/Donor';
 import DonationCenter from './pages/DonationCenter';
 import Footer from './components/Footer';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/Recipient" element={<Recipient />} />
             <Route path="/Donor" element={<Donor />} />
             <Route path="/BloodBank" element={<DonationCenter />} />
+            <Route path="/Profile" element={<Profile />} />
             {/* Add more routes as needed */}
           </Routes>
        

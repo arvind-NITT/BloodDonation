@@ -3,136 +3,163 @@
   "WorkspaceRootPath": "C:\\BloodDonation\\BloodDonationBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\bloodbankservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\bloodbankservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDF78C2E-5AFC-463C-91A1-A4CC630F210A}|..\\BloodDonationBackendTest\\BloodDonationBackendTest.csproj|c:\\blooddonation\\blooddonationbackendtest\\bloodbankservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDF78C2E-5AFC-463C-91A1-A4CC630F210A}|..\\BloodDonationBackendTest\\BloodDonationBackendTest.csproj|c:\\blooddonation\\blooddonationbackendtest\\bloodinventoryservicestest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDF78C2E-5AFC-463C-91A1-A4CC630F210A}|..\\BloodDonationBackendTest\\BloodDonationBackendTest.csproj|c:\\blooddonation\\blooddonationbackendtest\\recipientservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\recipientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\recipientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donorsearchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donorsearchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\bloodbankservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\bloodbankservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDF78C2E-5AFC-463C-91A1-A4CC630F210A}|..\\BloodDonationBackendTest\\BloodDonationBackendTest.csproj|c:\\blooddonation\\blooddonationbackendtest\\donorservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\donorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\donorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\bloodbankcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\bloodbankcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\viewappointmentreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\viewappointmentreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\ibloodbankservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\ibloodbankservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\bloodinventoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\bloodinventoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\bloodinventoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\bloodinventoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\scheduleappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\scheduleappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDF78C2E-5AFC-463C-91A1-A4CC630F210A}|..\\BloodDonationBackendTest\\BloodDonationBackendTest.csproj|c:\\blooddonation\\blooddonationbackendtest\\appointmentservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\updateinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\updateinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\ibloodinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\ibloodinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\recipient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\recipient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\bloodrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\bloodrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\bloodinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\bloodinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\viewappointmentreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\viewappointmentreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donationcenterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donationcenterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\recipientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\recipientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\canclerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\canclerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\irecipientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\irecipientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\recipient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\recipient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\donorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\donorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\userdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\userdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\updaterequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\updaterequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\bloodrequestreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\bloodrequestreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\returninventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\returninventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\medicalinfoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\medicalinfoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\bloodinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\bloodinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donorupdatereturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donorupdatereturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donorupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donorupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donationcenterinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donationcenterinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donorsearchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donorsearchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donorsearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donorsearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donationcentersearchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donationcentersearchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donationcentersearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donationcentersearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donationcenterinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donationcenterinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donationcenterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donationcenterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\checkavailabilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\checkavailabilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\canclerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\canclerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\cancleappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\cancleappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\bloodrequestreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\bloodrequestreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\bloodrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\bloodrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\bloodinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\bloodinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\availablitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -143,12 +170,63 @@
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\addinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\cancleappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\cancleappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDF78C2E-5AFC-463C-91A1-A4CC630F210A}|..\\BloodDonationBackendTest\\BloodDonationBackendTest.csproj|c:\\blooddonation\\blooddonationbackendtest\\userservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\donorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\donorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\idonorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\idonorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\bloodbankcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\bloodbankcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\ibloodbankservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\ibloodbankservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\ibloodinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\ibloodinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\recipientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\recipientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\irecipientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\irecipientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\repositories\\appointmentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -159,28 +237,8 @@
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:repositories\\bloodinventoryrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\returninventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\returninventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\idonorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\idonorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\scheduleappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\scheduleappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\bloodrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\bloodrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\repositories\\bloodrequestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,36 +249,12 @@
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:repositories\\donorrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\medicalinfoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\medicalinfoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\repositories\\recipientrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:repositories\\recipientrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\bloodrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\bloodrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donorsearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donorsearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donorupdatereturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donorupdatereturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donorupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donorupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -239,28 +273,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240726065806_updateDonationcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\donationcentersearchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\donationcentersearchreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\contexts\\blooddonationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:contexts\\blooddonationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\exceptions\\unabletoregisterexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -269,10 +287,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\repositories\\userdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:repositories\\userdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\models\\dtos\\userdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|solutionrelative:models\\dtos\\userdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9EAEF3D-5263-4D58-816F-FB5169810483}|BloodDonationBackend.csproj|c:\\blooddonation\\blooddonationbackend\\migrations\\20240726065942_updatedonationcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -290,24 +304,245 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecipientServiceTests.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackendTest\\RecipientServiceTests.cs",
+              "RelativeDocumentMoniker": "..\\BloodDonationBackendTest\\RecipientServiceTests.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackendTest\\RecipientServiceTests.cs",
+              "RelativeToolTip": "..\\BloodDonationBackendTest\\RecipientServiceTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T19:15:52.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DonorServiceTest.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackendTest\\DonorServiceTest.cs",
+              "RelativeDocumentMoniker": "..\\BloodDonationBackendTest\\DonorServiceTest.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackendTest\\DonorServiceTest.cs",
+              "RelativeToolTip": "..\\BloodDonationBackendTest\\DonorServiceTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMBAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T19:14:15.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BloodInventoryServicesTest.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackendTest\\BloodInventoryServicesTest.cs",
+              "RelativeDocumentMoniker": "..\\BloodDonationBackendTest\\BloodInventoryServicesTest.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackendTest\\BloodInventoryServicesTest.cs",
+              "RelativeToolTip": "..\\BloodDonationBackendTest\\BloodInventoryServicesTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T19:12:48.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BloodBankServiceTest.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackendTest\\BloodBankServiceTest.cs",
+              "RelativeDocumentMoniker": "..\\BloodDonationBackendTest\\BloodBankServiceTest.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackendTest\\BloodBankServiceTest.cs",
+              "RelativeToolTip": "..\\BloodDonationBackendTest\\BloodBankServiceTest.cs",
+              "ViewState": "AQIAAA4BAAAAAAAAAAAkwBcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T18:46:58.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateInventory.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UpdateInventory.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\UpdateInventory.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UpdateInventory.cs",
+              "RelativeToolTip": "Models\\DTOs\\UpdateInventory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T07:06:18.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "BloodBankService.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\BloodBankService.cs",
               "RelativeDocumentMoniker": "Services\\BloodBankService.cs",
               "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\BloodBankService.cs",
               "RelativeToolTip": "Services\\BloodBankService.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAqwDYAAAA3AAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAgwI0AAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-01T10:43:05.391Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RecipientService.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\RecipientService.cs",
+              "RelativeDocumentMoniker": "Services\\RecipientService.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\RecipientService.cs",
+              "RelativeToolTip": "Services\\RecipientService.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAmwBkBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T11:21:46.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ScheduleAppointmentDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ScheduleAppointmentDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\ScheduleAppointmentDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ScheduleAppointmentDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\ScheduleAppointmentDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T11:34:31.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "DonorService.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\DonorService.cs",
+              "RelativeDocumentMoniker": "Services\\DonorService.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\DonorService.cs",
+              "RelativeToolTip": "Services\\DonorService.cs",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAkwPkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T11:14:28.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BloodInventoryServices.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\BloodInventoryServices.cs",
+              "RelativeDocumentMoniker": "Services\\BloodInventoryServices.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\BloodInventoryServices.cs",
+              "RelativeToolTip": "Services\\BloodInventoryServices.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAiwFkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T16:42:01.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppointmentServiceTest.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackendTest\\AppointmentServiceTest.cs",
+              "RelativeDocumentMoniker": "..\\BloodDonationBackendTest\\AppointmentServiceTest.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackendTest\\AppointmentServiceTest.cs",
+              "RelativeToolTip": "..\\BloodDonationBackendTest\\AppointmentServiceTest.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T18:34:10.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserDetail.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\UserDetail.cs",
+              "RelativeDocumentMoniker": "Models\\UserDetail.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\UserDetail.cs",
+              "RelativeToolTip": "Models\\UserDetail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T05:16:09.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateInventoryDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\UpdateInventoryDTO.cs",
+              "RelativeDocumentMoniker": "Models\\UpdateInventoryDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\UpdateInventoryDTO.cs",
+              "RelativeToolTip": "Models\\UpdateInventoryDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T06:28:03.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Recipient.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Recipient.cs",
+              "RelativeDocumentMoniker": "Models\\Recipient.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Recipient.cs",
+              "RelativeToolTip": "Models\\Recipient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T04:47:09.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ErrorModel.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\ErrorModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorModel.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\ErrorModel.cs",
+              "RelativeToolTip": "Models\\ErrorModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T10:47:17.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Donor.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Donor.cs",
+              "RelativeDocumentMoniker": "Models\\Donor.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Donor.cs",
+              "RelativeToolTip": "Models\\Donor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T04:41:51.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BloodRequest.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\BloodRequest.cs",
+              "RelativeDocumentMoniker": "Models\\BloodRequest.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\BloodRequest.cs",
+              "RelativeToolTip": "Models\\BloodRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T04:48:57.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BloodInventory.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\BloodInventory.cs",
+              "RelativeDocumentMoniker": "Models\\BloodInventory.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\BloodInventory.cs",
+              "RelativeToolTip": "Models\\BloodInventory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T05:00:50.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "Models\\Appointment.cs",
@@ -320,306 +555,254 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Donor.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Donor.cs",
-              "RelativeDocumentMoniker": "Models\\Donor.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Donor.cs",
-              "RelativeToolTip": "Models\\Donor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T04:41:51.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppointmentService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\AppointmentService.cs",
-              "RelativeDocumentMoniker": "Services\\AppointmentService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\AppointmentService.cs",
-              "RelativeToolTip": "Services\\AppointmentService.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAwwEgAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T07:00:35.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BloodBankController.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\BloodBankController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BloodBankController.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\BloodBankController.cs",
-              "RelativeToolTip": "Controllers\\BloodBankController.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAA2wIEAAABwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T11:09:06.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DonorService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\DonorService.cs",
-              "RelativeDocumentMoniker": "Services\\DonorService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\DonorService.cs",
-              "RelativeToolTip": "Services\\DonorService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwGkAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T11:14:28.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RecipientService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\RecipientService.cs",
-              "RelativeDocumentMoniker": "Services\\RecipientService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\RecipientService.cs",
-              "RelativeToolTip": "Services\\RecipientService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgBAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T11:21:46.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DonorSearchReturnDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorSearchReturnDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\DonorSearchReturnDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorSearchReturnDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\DonorSearchReturnDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T11:03:14.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IAppointmentService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IAppointmentService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IAppointmentService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IAppointmentService.cs",
-              "RelativeToolTip": "Interfaces\\IAppointmentService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:24:44.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "ViewAppointmentReturnDTO.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ViewAppointmentReturnDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\ViewAppointmentReturnDTO.cs",
               "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ViewAppointmentReturnDTO.cs",
               "RelativeToolTip": "Models\\DTOs\\ViewAppointmentReturnDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T09:54:51.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IBloodBankservice.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IBloodBankservice.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IBloodBankservice.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IBloodBankservice.cs",
-              "RelativeToolTip": "Interfaces\\IBloodBankservice.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T16:44:28.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UpdateInventory.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UpdateInventory.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\UpdateInventory.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UpdateInventory.cs",
-              "RelativeToolTip": "Models\\DTOs\\UpdateInventory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T07:06:18.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BloodInventoryServices.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\BloodInventoryServices.cs",
-              "RelativeDocumentMoniker": "Services\\BloodInventoryServices.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\BloodInventoryServices.cs",
-              "RelativeToolTip": "Services\\BloodInventoryServices.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAwwEQAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T16:42:01.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UpdateInventoryDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\UpdateInventoryDTO.cs",
-              "RelativeDocumentMoniker": "Models\\UpdateInventoryDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\UpdateInventoryDTO.cs",
-              "RelativeToolTip": "Models\\UpdateInventoryDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T06:28:03.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IBloodInventoryService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IBloodInventoryService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IBloodInventoryService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IBloodInventoryService.cs",
-              "RelativeToolTip": "Interfaces\\IBloodInventoryService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:27:55.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BloodInventory.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\BloodInventory.cs",
-              "RelativeDocumentMoniker": "Models\\BloodInventory.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\BloodInventory.cs",
-              "RelativeToolTip": "Models\\BloodInventory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T05:00:50.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "LoginReturnDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\LoginReturnDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\LoginReturnDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\LoginReturnDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\LoginReturnDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:59:22.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAuwDEAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T09:28:19.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DonationCenterDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\DonationCenterDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\DonationCenterDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T07:19:46.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RecipientController.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\RecipientController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RecipientController.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\RecipientController.cs",
-              "RelativeToolTip": "Controllers\\RecipientController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAANYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T11:55:58.456Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "CancleRequestDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CancleRequestDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\CancleRequestDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CancleRequestDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\CancleRequestDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAcAAAA",
+              "Title": "UserRegisterDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserRegisterDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\UserRegisterDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserRegisterDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\UserRegisterDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T05:10:36.368Z",
+              "WhenOpened": "2024-07-24T10:01:11.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "IRecipientService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IRecipientService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IRecipientService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IRecipientService.cs",
-              "RelativeToolTip": "Interfaces\\IRecipientService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAA5AAAA",
+              "Title": "UserLoginDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserLoginDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\UserLoginDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserLoginDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\UserLoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T04:30:57.247Z",
+              "WhenOpened": "2024-07-24T10:00:41.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "Recipient.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Recipient.cs",
-              "RelativeDocumentMoniker": "Models\\Recipient.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\Recipient.cs",
-              "RelativeToolTip": "Models\\Recipient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Title": "UserDetailsDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserDetailsDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\UserDetailsDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserDetailsDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\UserDetailsDTO.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAuwBoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T04:47:09.86Z",
+              "WhenOpened": "2024-07-25T07:10:18.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "DonorController.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\DonorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DonorController.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\DonorController.cs",
-              "RelativeToolTip": "Controllers\\DonorController.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAA0wOgAAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T07:05:57.489Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
               "Title": "UpdateRequestDTO.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UpdateRequestDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\UpdateRequestDTO.cs",
               "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UpdateRequestDTO.cs",
               "RelativeToolTip": "Models\\DTOs\\UpdateRequestDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-25T06:55:44.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ReturnInventoryDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ReturnInventoryDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\ReturnInventoryDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ReturnInventoryDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\ReturnInventoryDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T06:28:41.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 25,
+              "Title": "medicalinfoupdateDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\medicalinfoupdateDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\medicalinfoupdateDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\medicalinfoupdateDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\medicalinfoupdateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T09:24:49.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LoginReturnDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\LoginReturnDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\LoginReturnDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\LoginReturnDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\LoginReturnDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T09:59:22.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DonorUpdateReturnDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorUpdateReturnDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\DonorUpdateReturnDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorUpdateReturnDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\DonorUpdateReturnDTO.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T06:53:44.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DonorUpdateDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorUpdateDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\DonorUpdateDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorUpdateDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\DonorUpdateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T06:42:36.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DonorSearchReturnDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorSearchReturnDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\DonorSearchReturnDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorSearchReturnDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\DonorSearchReturnDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T11:03:14.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DonorSearchDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorSearchDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\DonorSearchDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorSearchDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\DonorSearchDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T10:49:12.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DonationCenterSearchReturnDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterSearchReturnDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\DonationCenterSearchReturnDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterSearchReturnDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\DonationCenterSearchReturnDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T11:22:27.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DonationCenterSearchDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterSearchDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\DonationCenterSearchDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterSearchDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\DonationCenterSearchDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T11:20:01.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DonationCenterInventoryDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterInventoryDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\DonationCenterInventoryDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterInventoryDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\DonationCenterInventoryDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T18:01:48.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DonationCenterDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\DonationCenterDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\DonationCenterDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T07:19:46.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CheckAvailabilityDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CheckAvailabilityDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\CheckAvailabilityDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CheckAvailabilityDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\CheckAvailabilityDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T06:20:09.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "CancleRequestDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CancleRequestDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\CancleRequestDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CancleRequestDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\CancleRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:10:36.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CancleAppointmentDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CancleAppointmentDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\CancleAppointmentDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CancleAppointmentDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\CancleAppointmentDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T07:32:09.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "BloodRequestReturnDTO.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodRequestReturnDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\BloodRequestReturnDTO.cs",
@@ -632,7 +815,102 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 39,
+              "Title": "BloodRequestDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodRequestDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\BloodRequestDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodRequestDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\BloodRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T04:55:52.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "BloodInventoryDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodInventoryDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\BloodInventoryDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodInventoryDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\BloodInventoryDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T18:03:01.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AvailablityDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\AvailablityDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\AvailablityDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\AvailablityDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\AvailablityDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T06:23:22.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AddInventoryDTO.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\AddInventoryDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\AddInventoryDTO.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\AddInventoryDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\AddInventoryDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T16:43:31.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UserServiceTest.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackendTest\\UserServiceTest.cs",
+              "RelativeDocumentMoniker": "..\\BloodDonationBackendTest\\UserServiceTest.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackendTest\\UserServiceTest.cs",
+              "RelativeToolTip": "..\\BloodDonationBackendTest\\UserServiceTest.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAwwIEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T17:55:11.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\AdminService.cs",
+              "RelativeDocumentMoniker": "Services\\AdminService.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\AdminService.cs",
+              "RelativeToolTip": "Services\\AdminService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T05:27:15.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "Services\\AppointmentService.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\AppointmentService.cs",
+              "RelativeToolTip": "Services\\AppointmentService.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAUwEkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T07:00:35.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IUserService.cs",
@@ -640,47 +918,129 @@
               "RelativeToolTip": "Interfaces\\IUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAB4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:56:23.114Z"
+              "WhenOpened": "2024-07-24T09:56:23.114Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 49,
+              "Title": "BloodBankController.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\BloodBankController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BloodBankController.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\BloodBankController.cs",
+              "RelativeToolTip": "Controllers\\BloodBankController.cs",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAqwLIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T11:09:06.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IDonorService.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IDonorService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDonorService.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IDonorService.cs",
+              "RelativeToolTip": "Interfaces\\IDonorService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T05:26:12.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "DonorController.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\DonorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DonorController.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\DonorController.cs",
+              "RelativeToolTip": "Controllers\\DonorController.cs",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAiwKUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T07:05:57.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "IBloodBankservice.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IBloodBankservice.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IBloodBankservice.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IBloodBankservice.cs",
+              "RelativeToolTip": "Interfaces\\IBloodBankservice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T16:44:28.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "IAppointmentService.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IAppointmentService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IAppointmentService.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IAppointmentService.cs",
+              "RelativeToolTip": "Interfaces\\IAppointmentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T05:24:44.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "IBloodInventoryService.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IBloodInventoryService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IBloodInventoryService.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IBloodInventoryService.cs",
+              "RelativeToolTip": "Interfaces\\IBloodInventoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T05:27:55.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "RecipientController.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\RecipientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RecipientController.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\RecipientController.cs",
+              "RelativeToolTip": "Controllers\\RecipientController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwNYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T11:55:58.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "IRecipientService.cs",
+              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IRecipientService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IRecipientService.cs",
+              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IRecipientService.cs",
+              "RelativeToolTip": "Interfaces\\IRecipientService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T04:30:57.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAiwEwAAABTAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAA2wEwAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T10:44:57.638Z"
+              "WhenOpened": "2024-07-25T10:44:57.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DonationCenterInventoryDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterInventoryDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\DonationCenterInventoryDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterInventoryDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\DonationCenterInventoryDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T18:01:48.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BloodInventoryDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodInventoryDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\BloodInventoryDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodInventoryDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\BloodInventoryDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T18:03:01.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 56,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "Services\\TokenService.cs",
@@ -688,71 +1048,12 @@
               "RelativeToolTip": "Services\\TokenService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:34:39.543Z"
+              "WhenOpened": "2024-07-24T09:34:39.543Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "DonationCenterSearchDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterSearchDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\DonationCenterSearchDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterSearchDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\DonationCenterSearchDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T11:20:01.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "CheckAvailabilityDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CheckAvailabilityDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\CheckAvailabilityDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CheckAvailabilityDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\CheckAvailabilityDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T06:20:09.483Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "AvailablityDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\AvailablityDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\AvailablityDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\AvailablityDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\AvailablityDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T06:23:22.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AddInventoryDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\AddInventoryDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\AddInventoryDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\AddInventoryDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\AddInventoryDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T16:43:31.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "CancleAppointmentDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CancleAppointmentDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\CancleAppointmentDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\CancleAppointmentDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\CancleAppointmentDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T07:32:09.724Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 58,
               "Title": "AppointmentRepo.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Repositories\\AppointmentRepo.cs",
               "RelativeDocumentMoniker": "Repositories\\AppointmentRepo.cs",
@@ -760,11 +1061,12 @@
               "RelativeToolTip": "Repositories\\AppointmentRepo.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAwwCUAAACJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:05:57.226Z"
+              "WhenOpened": "2024-07-24T07:05:57.226Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 57,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -772,11 +1074,12 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAIwEsAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T08:45:27.207Z"
+              "WhenOpened": "2024-07-24T08:45:27.207Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 59,
               "Title": "BloodInventoryRepo.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Repositories\\BloodInventoryRepo.cs",
               "RelativeDocumentMoniker": "Repositories\\BloodInventoryRepo.cs",
@@ -784,83 +1087,25 @@
               "RelativeToolTip": "Repositories\\BloodInventoryRepo.cs",
               "ViewState": "AQIAACwAAAAAAAAAAAAIwD0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:17:36.32Z"
+              "WhenOpened": "2024-07-24T07:17:36.32Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ReturnInventoryDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ReturnInventoryDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\ReturnInventoryDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ReturnInventoryDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\ReturnInventoryDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T06:28:41.489Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 60,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAJAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwBIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T06:20:03.64Z"
+              "WhenOpened": "2024-07-26T06:20:03.64Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Services\\AdminService.cs",
-              "RelativeDocumentMoniker": "Services\\AdminService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Services\\AdminService.cs",
-              "RelativeToolTip": "Services\\AdminService.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwEUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T05:27:15.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "IDonorService.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IDonorService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IDonorService.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IDonorService.cs",
-              "RelativeToolTip": "Interfaces\\IDonorService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T05:26:12.319Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "ScheduleAppointmentDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ScheduleAppointmentDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\ScheduleAppointmentDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\ScheduleAppointmentDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\ScheduleAppointmentDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T11:34:31.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "BloodRequest.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\BloodRequest.cs",
-              "RelativeDocumentMoniker": "Models\\BloodRequest.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\BloodRequest.cs",
-              "RelativeToolTip": "Models\\BloodRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T04:48:57.841Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 61,
               "Title": "BloodRequestRepo.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Repositories\\BloodRequestRepo.cs",
               "RelativeDocumentMoniker": "Repositories\\BloodRequestRepo.cs",
@@ -868,11 +1113,12 @@
               "RelativeToolTip": "Repositories\\BloodRequestRepo.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAowEIAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:05:41.493Z"
+              "WhenOpened": "2024-07-24T07:05:41.493Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 62,
               "Title": "DonorRepo.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Repositories\\DonorRepo.cs",
               "RelativeDocumentMoniker": "Repositories\\DonorRepo.cs",
@@ -880,23 +1126,12 @@
               "RelativeToolTip": "Repositories\\DonorRepo.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAowD0AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:04:41.797Z"
+              "WhenOpened": "2024-07-24T07:04:41.797Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "medicalinfoupdateDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\medicalinfoupdateDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\medicalinfoupdateDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\medicalinfoupdateDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\medicalinfoupdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T09:24:49.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 64,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\IRepository.cs",
@@ -904,11 +1139,12 @@
               "RelativeToolTip": "Interfaces\\IRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:26:30.201Z"
+              "WhenOpened": "2024-07-24T07:26:30.201Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 63,
               "Title": "RecipientRepo.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Repositories\\RecipientRepo.cs",
               "RelativeDocumentMoniker": "Repositories\\RecipientRepo.cs",
@@ -916,23 +1152,12 @@
               "RelativeToolTip": "Repositories\\RecipientRepo.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAtwD0AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:05:27.359Z"
+              "WhenOpened": "2024-07-24T07:05:27.359Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "ErrorModel.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\ErrorModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorModel.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\ErrorModel.cs",
-              "RelativeToolTip": "Models\\ErrorModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T10:47:17.006Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 74,
               "Title": "20240726185946_updateBloodRequest.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Migrations\\20240726185946_updateBloodRequest.cs",
               "RelativeDocumentMoniker": "Migrations\\20240726185946_updateBloodRequest.cs",
@@ -940,59 +1165,12 @@
               "RelativeToolTip": "Migrations\\20240726185946_updateBloodRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T18:59:46.264Z"
+              "WhenOpened": "2024-07-26T18:59:46.264Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "BloodRequestDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodRequestDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\BloodRequestDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\BloodRequestDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\BloodRequestDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T04:55:52.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "DonorSearchDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorSearchDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\DonorSearchDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorSearchDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\DonorSearchDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T10:49:12.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "DonorUpdateReturnDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorUpdateReturnDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\DonorUpdateReturnDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorUpdateReturnDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\DonorUpdateReturnDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T06:53:44.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "DonorUpdateDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorUpdateDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\DonorUpdateDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonorUpdateDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\DonorUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T06:42:36.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 65,
               "Title": "UserRepo.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Repositories\\UserRepo.cs",
               "RelativeDocumentMoniker": "Repositories\\UserRepo.cs",
@@ -1000,11 +1178,12 @@
               "RelativeToolTip": "Repositories\\UserRepo.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAcwEoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:04:29.203Z"
+              "WhenOpened": "2024-07-24T07:04:29.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 66,
               "Title": "DonationCenterRepo.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Repositories\\DonationCenterRepo.cs",
               "RelativeDocumentMoniker": "Repositories\\DonationCenterRepo.cs",
@@ -1012,11 +1191,12 @@
               "RelativeToolTip": "Repositories\\DonationCenterRepo.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:06:18.576Z"
+              "WhenOpened": "2024-07-24T07:06:18.576Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 67,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -1024,11 +1204,12 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-24T09:12:26.745Z"
+              "WhenOpened": "2024-07-24T09:12:26.745Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 73,
               "Title": "20240726065942_updateDonationcenter.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Migrations\\20240726065942_updateDonationcenter.cs",
               "RelativeDocumentMoniker": "Migrations\\20240726065942_updateDonationcenter.cs",
@@ -1036,35 +1217,23 @@
               "RelativeToolTip": "Migrations\\20240726065942_updateDonationcenter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T06:59:43.097Z"
+              "WhenOpened": "2024-07-26T06:59:43.097Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 68,
               "Title": "20240726065806_updateDonationcenter.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Migrations\\20240726065806_updateDonationcenter.cs",
               "RelativeDocumentMoniker": "Migrations\\20240726065806_updateDonationcenter.cs",
               "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Migrations\\20240726065806_updateDonationcenter.cs",
               "RelativeToolTip": "Migrations\\20240726065806_updateDonationcenter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-26T06:58:06.86Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "DonationCenterSearchReturnDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterSearchReturnDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\DonationCenterSearchReturnDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\DonationCenterSearchReturnDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\DonationCenterSearchReturnDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T11:22:27.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 69,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "Interfaces\\ITokenService.cs",
@@ -1072,59 +1241,25 @@
               "RelativeToolTip": "Interfaces\\ITokenService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:35:21.859Z"
+              "WhenOpened": "2024-07-24T09:35:21.859Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "UserLoginDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserLoginDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\UserLoginDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserLoginDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\UserLoginDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAABwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T10:00:41.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 70,
               "Title": "BloodDonationContext.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Contexts\\BloodDonationContext.cs",
               "RelativeDocumentMoniker": "Contexts\\BloodDonationContext.cs",
               "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Contexts\\BloodDonationContext.cs",
               "RelativeToolTip": "Contexts\\BloodDonationContext.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAIwB0AAAAAAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAwwB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T05:29:53.381Z"
+              "WhenOpened": "2024-07-24T05:29:53.381Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "UserDetail.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\UserDetail.cs",
-              "RelativeDocumentMoniker": "Models\\UserDetail.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\UserDetail.cs",
-              "RelativeToolTip": "Models\\UserDetail.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T05:16:09.366Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "UserRegisterDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserRegisterDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\UserRegisterDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserRegisterDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\UserRegisterDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T10:01:11.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 71,
               "Title": "UnableToRegisterException.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Exceptions\\UnableToRegisterException.cs",
               "RelativeDocumentMoniker": "Exceptions\\UnableToRegisterException.cs",
@@ -1132,11 +1267,12 @@
               "RelativeToolTip": "Exceptions\\UnableToRegisterException.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T10:42:00.801Z"
+              "WhenOpened": "2024-07-25T10:42:00.801Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 72,
               "Title": "UserDetailRepository.cs",
               "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Repositories\\UserDetailRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UserDetailRepository.cs",
@@ -1144,19 +1280,8 @@
               "RelativeToolTip": "Repositories\\UserDetailRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T08:40:06.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "UserDetailsDTO.cs",
-              "DocumentMoniker": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserDetailsDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\UserDetailsDTO.cs",
-              "ToolTip": "C:\\BloodDonation\\BloodDonationBackend\\Models\\DTOs\\UserDetailsDTO.cs",
-              "RelativeToolTip": "Models\\DTOs\\UserDetailsDTO.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T07:10:18.274Z"
+              "WhenOpened": "2024-07-24T08:40:06.863Z",
+              "EditorCaption": ""
             }
           ]
         }

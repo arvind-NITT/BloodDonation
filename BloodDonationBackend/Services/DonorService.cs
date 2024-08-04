@@ -103,6 +103,42 @@ namespace BloodDonationBackend.Services
         }
 
 
+        public async Task<DonorUpdateReturnDTO> GetInfo(int userid)
+        {
+            // Fetch donor and user details based on the user ID
+            var donor = await _context.Donors.Where(d => d.UserId == userid).FirstOrDefaultAsync();
+            var user = await _UserRepo.Get(userid);
+
+            // Throw exception if donor or user is not found
+            if (donor == null)
+            {
+                throw new Exception("Donor not found.");
+            }
+            if (user == null)
+            {
+                throw new Exception("User not found.");
+            }
+
+            // Map the properties to the DonorUpdateDTO
+            var returnDTO = new DonorUpdateReturnDTO
+            {
+                Name = user.Name,
+                DOB = user.DOB,
+                BloodType = user.BloodType,
+                Gender = user.Gender,
+                Father_Name = user.Father_Name,
+                state = user.state,
+                District = user.District,
+                Pincode = user.Pincode,
+                Address = user.Address,
+                Available = donor.Available,
+                LastDonationDate = donor.LastDonationDate,
+                TotalDonations = donor.TotalDonations
+            };
+
+            return returnDTO;
+        }
+
         public async Task<DonorUpdateReturnDTO> UpdateInfo(int userid, DonorUpdateDTO DonorUpdate)
         {
             var donor = await _context.Donors.Where(d=> d.UserId == userid).FirstOrDefaultAsync();
@@ -130,10 +166,18 @@ namespace BloodDonationBackend.Services
 
             var returnDTO = new DonorUpdateReturnDTO
             {
+                Name = user.Name,
+                DOB = user.DOB,
+                BloodType = user.BloodType,
+                Gender = user.Gender,
+                Father_Name = user.Father_Name,
+                state = user.state,
+                District = user.District,
+                Pincode = user.Pincode,
+                Address = user.Address,
+                Available = donor.Available,
                 LastDonationDate = donor.LastDonationDate,
-
-                TotalDonations= donor.TotalDonations,
-                Available = donor.Available
+                TotalDonations = donor.TotalDonations
             };
 
             return returnDTO;
